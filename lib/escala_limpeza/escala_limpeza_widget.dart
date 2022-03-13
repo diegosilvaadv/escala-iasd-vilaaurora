@@ -7,15 +7,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class EscalaSonoplastiaWidget extends StatefulWidget {
-  const EscalaSonoplastiaWidget({Key key}) : super(key: key);
+class EscalaLimpezaWidget extends StatefulWidget {
+  const EscalaLimpezaWidget({Key key}) : super(key: key);
 
   @override
-  _EscalaSonoplastiaWidgetState createState() =>
-      _EscalaSonoplastiaWidgetState();
+  _EscalaLimpezaWidgetState createState() => _EscalaLimpezaWidgetState();
 }
 
-class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
+class _EscalaLimpezaWidgetState extends State<EscalaLimpezaWidget> {
   TextEditingController textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -210,7 +209,36 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Icon(
-                        Icons.group,
+                        Icons.queue_music,
+                        color: Colors.black,
+                        size: 30,
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(7, 0, 0, 0),
+                        child: Text(
+                          'Escala Sonoplastia',
+                          style:
+                              FlutterFlowTheme.of(context).bodyText1.override(
+                                    fontFamily: 'Poppins',
+                                    color: Color(0xFF151515),
+                                    fontSize: 24,
+                                  ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(10, 15, 0, 0),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Icon(
+                        Icons.people,
                         color: Colors.black,
                         size: 30,
                       ),
@@ -247,35 +275,6 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(7, 0, 0, 0),
                         child: Text(
                           'Escala Musical',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Color(0xFF151515),
-                                    fontSize: 24,
-                                  ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10, 15, 0, 0),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(
-                        Icons.cleaning_services,
-                        color: Colors.black,
-                        size: 30,
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(7, 0, 0, 0),
-                        child: Text(
-                          'Escala Limpeza',
                           style:
                               FlutterFlowTheme.of(context).bodyText1.override(
                                     fontFamily: 'Poppins',
@@ -361,7 +360,7 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
                   child: Text(
-                    'Escala da Sonoplastia',
+                    'Escala da Limpeza',
                     style: FlutterFlowTheme.of(context).subtitle1.override(
                           fontFamily: 'Poppins',
                           color: Color(0xFF30123A),

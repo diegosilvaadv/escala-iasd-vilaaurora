@@ -1,3 +1,7 @@
+import '../escala_limpeza/escala_limpeza_widget.dart';
+import '../escala_musical/escala_musical_widget.dart';
+import '../escala_pastoral/escala_pastoral_widget.dart';
+import '../escala_pregadores/escala_pregadores_widget.dart';
 import '../escala_sonoplastia/escala_sonoplastia_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -139,10 +143,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           await Navigator.push(
                             context,
                             PageTransition(
-                              type: PageTransitionType.fade,
+                              type: PageTransitionType.scale,
+                              alignment: Alignment.bottomCenter,
                               duration: Duration(milliseconds: 500),
                               reverseDuration: Duration(milliseconds: 500),
-                              child: EscalaSonoplastiaWidget(),
+                              child: EscalaPregadoresWidget(),
                             ),
                           );
                         },
@@ -190,7 +195,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               type: PageTransitionType.fade,
                               duration: Duration(milliseconds: 500),
                               reverseDuration: Duration(milliseconds: 500),
-                              child: EscalaSonoplastiaWidget(),
+                              child: EscalaMusicalWidget(),
                             ),
                           );
                         },
@@ -238,7 +243,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               type: PageTransitionType.fade,
                               duration: Duration(milliseconds: 500),
                               reverseDuration: Duration(milliseconds: 500),
-                              child: EscalaSonoplastiaWidget(),
+                              child: EscalaLimpezaWidget(),
                             ),
                           );
                         },
@@ -334,7 +339,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               type: PageTransitionType.fade,
                               duration: Duration(milliseconds: 500),
                               reverseDuration: Duration(milliseconds: 500),
-                              child: EscalaSonoplastiaWidget(),
+                              child: EscalaPastoralWidget(),
                             ),
                           );
                         },

@@ -7,15 +7,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class EscalaSonoplastiaWidget extends StatefulWidget {
-  const EscalaSonoplastiaWidget({Key key}) : super(key: key);
+class EscalaPregadoresWidget extends StatefulWidget {
+  const EscalaPregadoresWidget({Key key}) : super(key: key);
 
   @override
-  _EscalaSonoplastiaWidgetState createState() =>
-      _EscalaSonoplastiaWidgetState();
+  _EscalaPregadoresWidgetState createState() => _EscalaPregadoresWidgetState();
 }
 
-class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
+class _EscalaPregadoresWidgetState extends State<EscalaPregadoresWidget> {
   TextEditingController textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -210,14 +209,14 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Icon(
-                        Icons.group,
+                        Icons.queue_music,
                         color: Colors.black,
                         size: 30,
                       ),
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(7, 0, 0, 0),
                         child: Text(
-                          'Escala Pregadores',
+                          'Escala Sonoplastia',
                           style:
                               FlutterFlowTheme.of(context).bodyText1.override(
                                     fontFamily: 'Poppins',
@@ -361,7 +360,7 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
                   child: Text(
-                    'Escala da Sonoplastia',
+                    'Escala de Pregadores',
                     style: FlutterFlowTheme.of(context).subtitle1.override(
                           fontFamily: 'Poppins',
                           color: Color(0xFF30123A),
