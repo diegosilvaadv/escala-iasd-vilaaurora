@@ -6,8 +6,8 @@ import 'auth/firebase_user_provider.dart';
 
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/internationalization.dart';
-import 'package:escala_iasd/home_page/home_page_widget.dart';
 import 'package:escala_iasd/bemvindo/bemvindo_widget.dart';
+import 'package:escala_iasd/home_page/home_page_widget.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 void main() async {
@@ -79,8 +79,8 @@ class _MyAppState extends State<MyApp> {
               ),
             )
           : currentUser.loggedIn
-              ? BemvindoWidget()
-              : HomePageWidget(),
+              ? HomePageWidget()
+              : BemvindoWidget(),
     );
   }
 }
