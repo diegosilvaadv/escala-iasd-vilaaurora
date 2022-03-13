@@ -261,7 +261,7 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Icon(
-                        Icons.queue_music,
+                        Icons.mic_external_on,
                         color: Colors.black,
                         size: 30,
                       ),
@@ -290,7 +290,7 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Icon(
-                        Icons.queue_music,
+                        Icons.cleaning_services,
                         color: Colors.black,
                         size: 30,
                       ),
@@ -319,14 +319,43 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Icon(
-                        Icons.queue_music,
+                        Icons.school_rounded,
                         color: Colors.black,
                         size: 30,
                       ),
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(7, 0, 0, 0),
                         child: AutoSizeText(
-                          'Escala Escola Sabatina',
+                          'Escala Esc. Sabatina',
+                          style:
+                              FlutterFlowTheme.of(context).bodyText1.override(
+                                    fontFamily: 'Poppins',
+                                    color: Color(0xFF151515),
+                                    fontSize: 24,
+                                  ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(10, 15, 0, 0),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Icon(
+                        Icons.person_search_outlined,
+                        color: Colors.black,
+                        size: 30,
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(7, 0, 0, 0),
+                        child: AutoSizeText(
+                          'Escala Pastoral',
                           style:
                               FlutterFlowTheme.of(context).bodyText1.override(
                                     fontFamily: 'Poppins',
