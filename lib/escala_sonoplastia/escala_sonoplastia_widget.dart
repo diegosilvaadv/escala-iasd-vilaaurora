@@ -1,6 +1,7 @@
 import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../main.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -50,8 +51,8 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                       controller: textController,
                       obscureText: false,
                       decoration: InputDecoration(
-                        isDense: true,
                         labelText: 'Pesquisar',
+                        hintText: 'pesquisar',
                         enabledBorder: InputBorder.none,
                         focusedBorder: InputBorder.none,
                       ),
@@ -155,60 +156,44 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(10, 30, 0, 0),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.home,
-                        color: Color(0xFF4F1867),
-                        size: 30,
+                child: InkWell(
+                  onTap: () async {
+                    await Navigator.push(
+                      context,
+                      PageTransition(
+                        type: PageTransitionType.fade,
+                        duration: Duration(milliseconds: 500),
+                        reverseDuration: Duration(milliseconds: 500),
+                        child: NavBarPage(initialPage: 'HomePage'),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(7, 0, 0, 0),
-                        child: Text(
-                          'Tela Inicial',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Color(0xFF4F1867),
-                                    fontSize: 24,
-                                  ),
+                    );
+                  },
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.home,
+                          color: Color(0xFF4F1867),
+                          size: 30,
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10, 15, 0, 0),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(
-                        Icons.queue_music,
-                        color: Colors.black,
-                        size: 30,
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(7, 0, 0, 0),
-                        child: Text(
-                          'Escala Sonoplastia',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Color(0xFF151515),
-                                    fontSize: 24,
-                                  ),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(7, 0, 0, 0),
+                          child: Text(
+                            'Tela Inicial',
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFF4F1867),
+                                      fontSize: 24,
+                                    ),
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -366,6 +351,21 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
           Column(
             mainAxisSize: MainAxisSize.max,
             children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(5, 5, 0, 0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Text(
+                      'Escala da Sonoplastia',
+                      style: FlutterFlowTheme.of(context).subtitle1.override(
+                            fontFamily: 'Poppins',
+                            color: Color(0xFF30123A),
+                          ),
+                    ),
+                  ],
+                ),
+              ),
               Expanded(
                 child: SingleChildScrollView(
                   child: Column(
