@@ -93,93 +93,59 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
       backgroundColor: Color(0xFFF1F4F8),
       endDrawer: Drawer(
         elevation: 15,
-        child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.75,
-                      height: 70,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF4F1867),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Row(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                    child: Image.asset(
+                      'assets/images/channels4_profile-removebg-preview.png',
+                      width: 100,
+                      height: 100,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Column(
+                    mainAxisSize: MainAxisSize.max,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                            child: Icon(
-                              Icons.queue_music,
-                              color: Color(0xFFFCA311),
-                              size: 24,
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                            child: Text(
-                              'Escala da Sonoplastia',
-                              style:
-                                  FlutterFlowTheme.of(context).title3.override(
-                                        fontFamily: 'Noto Sans',
-                                        color: Colors.white,
-                                      ),
-                            ),
+                          Text(
+                            'IASD Vila Aurora',
+                            style: FlutterFlowTheme.of(context).title1.override(
+                                  fontFamily: 'Poppins',
+                                  color: Color(0xFF4F1867),
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w900,
+                                ),
                           ),
                         ],
                       ),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.75,
-                      height: 70,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF4F1867),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                            child: Icon(
-                              Icons.queue_music,
-                              color: Color(0xFFFCA311),
-                              size: 24,
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                            child: Text(
-                              'Escala da Sonoplastia',
-                              style:
-                                  FlutterFlowTheme.of(context).title3.override(
-                                        fontFamily: 'Noto Sans',
-                                        color: Colors.white,
-                                      ),
-                            ),
+                          Text(
+                            'Escala 2022',
+                            textAlign: TextAlign.start,
+                            style: FlutterFlowTheme.of(context).bodyText1,
                           ),
                         ],
                       ),
-                    ),
-                  ],
-                ),
+                    ],
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
       body: Stack(
