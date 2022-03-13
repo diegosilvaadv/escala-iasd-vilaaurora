@@ -87,7 +87,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                     children: [
                                       Expanded(
                                         child: Text(
-                                          'Search for Books',
+                                          'Seja Bem vindo (a) !',
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
                                               .title1
@@ -110,7 +110,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                     children: [
                                       Expanded(
                                         child: Text(
-                                          'Find amazing classic books in our library.',
+                                          'Nesse app você terá acesso a escala dos responsavéis da IASD Vila Auora.',
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
                                               .subtitle2
@@ -144,8 +144,8 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0, 0, 0, 20),
                                       child: Image.asset(
-                                        'assets/images/onboarding_2.png',
-                                        width: 300,
+                                        'assets/images/Escala_da_Igreja_Adventista_do_Vila_Aurora_-_Dist._Jaragu..png',
+                                        width: 350,
                                         height: 300,
                                         fit: BoxFit.fitWidth,
                                       ),
@@ -160,7 +160,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                     children: [
                                       Expanded(
                                         child: Text(
-                                          'Purchase Books',
+                                          'Fácil Acesso',
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
                                               .title1
@@ -183,7 +183,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                     children: [
                                       Expanded(
                                         child: Text(
-                                          'Buy and view all your favorite books you find in this library.',
+                                          'Tenha acesso a todas as escalas.',
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
                                               .subtitle2
@@ -217,7 +217,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0, 30, 0, 30),
                                       child: Image.asset(
-                                        'assets/images/onboarding_3.png',
+                                        'assets/images/Escala_da_Igreja_Adventista_do_Vila_Aurora_-_Dist._Jaragu._(1).png',
                                         width: 300,
                                         height: 250,
                                         fit: BoxFit.fitWidth,
@@ -233,7 +233,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                     children: [
                                       Expanded(
                                         child: Text(
-                                          'Review Purchases',
+                                          'Nossa Igreja',
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
                                               .title1
@@ -256,7 +256,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                     children: [
                                       Expanded(
                                         child: Text(
-                                          'Keep track of all your purchases that you have made, want to trade books in? Go ahead and list them for exchange.',
+                                          'Localização: Rua Giacomo Sarateli, 22A',
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
                                               .subtitle2
