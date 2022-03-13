@@ -323,9 +323,11 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                     onPressed: () async {
                       await Navigator.push(
                         context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              NavBarPage(initialPage: 'HomePage'),
+                        PageTransition(
+                          type: PageTransitionType.fade,
+                          duration: Duration(milliseconds: 500),
+                          reverseDuration: Duration(milliseconds: 500),
+                          child: NavBarPage(initialPage: 'HomePage'),
                         ),
                       );
                     },

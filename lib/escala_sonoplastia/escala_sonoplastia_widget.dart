@@ -31,20 +31,18 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).primaryColor,
         automaticallyImplyLeading: true,
+        leading: Icon(
+          Icons.arrow_back_ios_outlined,
+          color: Color(0xFFDA4167),
+          size: 24,
+        ),
         title: Column(
-          mainAxisSize: MainAxisSize.max,
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Row(
               mainAxisSize: MainAxisSize.max,
               children: [
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(4, 0, 4, 0),
-                  child: Icon(
-                    Icons.search_rounded,
-                    color: Color(0xFF95A1AC),
-                    size: 30,
-                  ),
-                ),
                 Expanded(
                   child: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(4, 0, 0, 0),
@@ -52,35 +50,26 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                       controller: textController,
                       obscureText: false,
                       decoration: InputDecoration(
+                        isDense: true,
                         labelText: 'Pesquisar',
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Color(0xFF979797),
-                            width: 1,
-                          ),
-                          borderRadius: const BorderRadius.only(
-                            topLeft: Radius.circular(4.0),
-                            topRight: Radius.circular(4.0),
-                          ),
-                        ),
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Color(0xFF979797),
-                            width: 1,
-                          ),
-                          borderRadius: const BorderRadius.only(
-                            topLeft: Radius.circular(4.0),
-                            topRight: Radius.circular(4.0),
-                          ),
-                        ),
+                        enabledBorder: InputBorder.none,
+                        focusedBorder: InputBorder.none,
                       ),
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Lexend Deca',
-                            color: Color(0xFF95A1AC),
+                            color: Color(0xFFC4C4C5),
                             fontSize: 14,
                             fontWeight: FontWeight.normal,
                           ),
                     ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(4, 0, 4, 0),
+                  child: Icon(
+                    Icons.search_rounded,
+                    color: Color(0xFF95A1AC),
+                    size: 30,
                   ),
                 ),
               ],
@@ -395,8 +384,8 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                                     child: SizedBox(
                                       width: 50,
                                       height: 50,
-                                      child: SpinKitDoubleBounce(
-                                        color: Color(0xFFFCA311),
+                                      child: SpinKitFoldingCube(
+                                        color: Color(0xFF30123A),
                                         size: 50,
                                       ),
                                     ),
@@ -433,8 +422,12 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                                                 child: ClipRRect(
                                                   borderRadius:
                                                       BorderRadius.circular(8),
-                                                  child: Image.asset(
-                                                    'assets/images/imageList@2x.png',
+                                                  child: Image.network(
+                                                    valueOrDefault<String>(
+                                                      listViewEscalaSonoplastiaRecord
+                                                          .img,
+                                                      'https://cdn-icons.flaticon.com/png/512/1778/premium/1778704.png?token=exp=1647212287~hmac=169526dfc34e3845922305e9b032014a',
+                                                    ),
                                                     width: 74,
                                                     height: 74,
                                                     fit: BoxFit.cover,
@@ -482,7 +475,7 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                                                     children: [
                                                       Text(
                                                         dateTimeFormat(
-                                                            'MMMMEEEEd',
+                                                            'yMMMd',
                                                             listViewEscalaSonoplastiaRecord
                                                                 .data),
                                                         style:
@@ -507,7 +500,10 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                                                         MainAxisSize.max,
                                                     children: [
                                                       Text(
-                                                        '1.7mi',
+                                                        dateTimeFormat(
+                                                            'EEEE',
+                                                            listViewEscalaSonoplastiaRecord
+                                                                .data),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)

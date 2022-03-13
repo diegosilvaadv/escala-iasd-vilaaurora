@@ -71,8 +71,8 @@ class _MyAppState extends State<MyApp> {
               child: SizedBox(
                 width: 50,
                 height: 50,
-                child: SpinKitDoubleBounce(
-                  color: Color(0xFFFCA311),
+                child: SpinKitFoldingCube(
+                  color: Color(0xFF30123A),
                   size: 50,
                 ),
               ),
