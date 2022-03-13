@@ -400,7 +400,6 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                                   snapshot.data;
                               return ListView.builder(
                                 padding: EdgeInsets.zero,
-                                primary: false,
                                 shrinkWrap: true,
                                 scrollDirection: Axis.vertical,
                                 itemCount:
