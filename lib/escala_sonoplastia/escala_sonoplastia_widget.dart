@@ -403,7 +403,7 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                       height: MediaQuery.of(context).size.height * 1,
                       decoration: BoxDecoration(),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 15),
                         child: StreamBuilder<List<EscalaSonoplastiaRecord>>(
                           stream: queryEscalaSonoplastiaRecord(),
                           builder: (context, snapshot) {
