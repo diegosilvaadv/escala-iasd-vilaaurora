@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1056959434612-lnb0dr218qlig4e97f5sq2vg8insisli.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1056959434612-lnb0dr218qlig4e97f5sq2vg8insisli</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1056959434612-ofiqaaa5i4gofacfhl3hg1pb2ujd13bn.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAiUnPRar1AQ37C0D4cY9freAD4RO7RRBg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1056959434612</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.dsilvaadv</string>
+	<key>PROJECT_ID</key>
+	<string>escala-iasd-vilaaurora</string>
+	<key>STORAGE_BUCKET</key>
+	<string>escala-iasd-vilaaurora.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1056959434612:ios:a4b656646758069394a621</string>
+</dict>
+</plist>
