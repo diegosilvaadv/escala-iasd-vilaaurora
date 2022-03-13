@@ -11,7 +11,7 @@ import 'flutter_flow/flutter_flow_theme.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'home_page/home_page_widget.dart';
-import 'escala_sonoplastia/escala_sonoplastia_widget.dart';
+import 'info/info_widget.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -107,7 +107,7 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'HomePage': HomePageWidget(),
-      'escala_sonoplastia': EscalaSonoplastiaWidget(),
+      'info': InfoWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPage);
     return Scaffold(
@@ -136,14 +136,14 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.queue_music,
+              Icons.info_outlined,
               size: 24,
             ),
             activeIcon: Icon(
-              Icons.library_music,
+              Icons.info_sharp,
               size: 24,
             ),
-            label: 'Shop',
+            label: 'Informações',
             tooltip: '',
           )
         ],

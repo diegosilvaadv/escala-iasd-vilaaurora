@@ -1,6 +1,6 @@
+import '../escala_sonoplastia/escala_sonoplastia_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../main.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -65,9 +65,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         elevation: 4,
       ),
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-      endDrawer: Drawer(
-        elevation: 16,
-      ),
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
@@ -97,8 +94,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               type: PageTransitionType.fade,
                               duration: Duration(milliseconds: 500),
                               reverseDuration: Duration(milliseconds: 500),
-                              child:
-                                  NavBarPage(initialPage: 'escala_sonoplastia'),
+                              child: EscalaSonoplastiaWidget(),
                             ),
                           );
                         },
@@ -146,8 +142,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               type: PageTransitionType.fade,
                               duration: Duration(milliseconds: 500),
                               reverseDuration: Duration(milliseconds: 500),
-                              child:
-                                  NavBarPage(initialPage: 'escala_sonoplastia'),
+                              child: EscalaSonoplastiaWidget(),
                             ),
                           );
                         },
@@ -195,8 +190,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               type: PageTransitionType.fade,
                               duration: Duration(milliseconds: 500),
                               reverseDuration: Duration(milliseconds: 500),
-                              child:
-                                  NavBarPage(initialPage: 'escala_sonoplastia'),
+                              child: EscalaSonoplastiaWidget(),
                             ),
                           );
                         },
@@ -244,8 +238,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               type: PageTransitionType.fade,
                               duration: Duration(milliseconds: 500),
                               reverseDuration: Duration(milliseconds: 500),
-                              child:
-                                  NavBarPage(initialPage: 'escala_sonoplastia'),
+                              child: EscalaSonoplastiaWidget(),
                             ),
                           );
                         },
@@ -293,8 +286,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               type: PageTransitionType.fade,
                               duration: Duration(milliseconds: 500),
                               reverseDuration: Duration(milliseconds: 500),
-                              child:
-                                  NavBarPage(initialPage: 'escala_sonoplastia'),
+                              child: EscalaSonoplastiaWidget(),
                             ),
                           );
                         },
@@ -342,8 +334,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               type: PageTransitionType.fade,
                               duration: Duration(milliseconds: 500),
                               reverseDuration: Duration(milliseconds: 500),
-                              child:
-                                  NavBarPage(initialPage: 'escala_sonoplastia'),
+                              child: EscalaSonoplastiaWidget(),
                             ),
                           );
                         },

@@ -27,111 +27,166 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
+      appBar: AppBar(
+        backgroundColor: FlutterFlowTheme.of(context).primaryColor,
+        automaticallyImplyLeading: true,
+        title: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(4, 0, 4, 0),
+                  child: Icon(
+                    Icons.search_rounded,
+                    color: Color(0xFF95A1AC),
+                    size: 30,
+                  ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(4, 0, 0, 0),
+                    child: TextFormField(
+                      controller: textController,
+                      obscureText: false,
+                      decoration: InputDecoration(
+                        labelText: 'Pesquisar',
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0x00000000),
+                            width: 1,
+                          ),
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(4.0),
+                            topRight: Radius.circular(4.0),
+                          ),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0x00000000),
+                            width: 1,
+                          ),
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(4.0),
+                            topRight: Radius.circular(4.0),
+                          ),
+                        ),
+                      ),
+                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                            fontFamily: 'Lexend Deca',
+                            color: Color(0xFF95A1AC),
+                            fontSize: 14,
+                            fontWeight: FontWeight.normal,
+                          ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+        actions: [],
+        centerTitle: true,
+        elevation: 4,
+      ),
       backgroundColor: Color(0xFFF1F4F8),
+      endDrawer: Drawer(
+        elevation: 15,
+        child: Padding(
+          padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.75,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        color: Color(0xFF4F1867),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                            child: Icon(
+                              Icons.queue_music,
+                              color: Color(0xFFFCA311),
+                              size: 24,
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                            child: Text(
+                              'Escala da Sonoplastia',
+                              style:
+                                  FlutterFlowTheme.of(context).title3.override(
+                                        fontFamily: 'Noto Sans',
+                                        color: Colors.white,
+                                      ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.75,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        color: Color(0xFF4F1867),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                            child: Icon(
+                              Icons.queue_music,
+                              color: Color(0xFFFCA311),
+                              size: 24,
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                            child: Text(
+                              'Escala da Sonoplastia',
+                              style:
+                                  FlutterFlowTheme.of(context).title3.override(
+                                        fontFamily: 'Noto Sans',
+                                        color: Colors.white,
+                                      ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
       body: Stack(
         children: [
           Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: 108,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                ),
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
-                        child: Container(
-                          width: MediaQuery.of(context).size.width * 0.95,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(8),
-                            border: Border.all(
-                              color: Color(0xFFEEEEEE),
-                              width: 2,
-                            ),
-                          ),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      4, 0, 4, 0),
-                                  child: Icon(
-                                    Icons.search_rounded,
-                                    color: Color(0xFF95A1AC),
-                                    size: 24,
-                                  ),
-                                ),
-                                Expanded(
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        4, 0, 0, 0),
-                                    child: TextFormField(
-                                      controller: textController,
-                                      obscureText: false,
-                                      decoration: InputDecoration(
-                                        labelText: 'Search events here...',
-                                        enabledBorder: UnderlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Color(0x00000000),
-                                            width: 1,
-                                          ),
-                                          borderRadius: const BorderRadius.only(
-                                            topLeft: Radius.circular(4.0),
-                                            topRight: Radius.circular(4.0),
-                                          ),
-                                        ),
-                                        focusedBorder: UnderlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Color(0x00000000),
-                                            width: 1,
-                                          ),
-                                          borderRadius: const BorderRadius.only(
-                                            topLeft: Radius.circular(4.0),
-                                            topRight: Radius.circular(4.0),
-                                          ),
-                                        ),
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'Lexend Deca',
-                                            color: Color(0xFF95A1AC),
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.normal,
-                                          ),
-                                    ),
-                                  ),
-                                ),
-                                Expanded(
-                                  child: Align(
-                                    alignment: AlignmentDirectional(0.95, 0),
-                                    child: Icon(
-                                      Icons.tune_rounded,
-                                      color: Color(0xFF95A1AC),
-                                      size: 24,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
               Expanded(
                 child: SingleChildScrollView(
                   child: Column(
