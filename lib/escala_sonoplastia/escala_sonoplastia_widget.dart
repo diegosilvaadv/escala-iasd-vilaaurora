@@ -62,10 +62,30 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                       controller: textController,
                       obscureText: false,
                       decoration: InputDecoration(
-                        labelText: 'Pesquisar',
-                        hintText: 'pesquisar',
-                        enabledBorder: InputBorder.none,
-                        focusedBorder: InputBorder.none,
+                        labelText: '  Pesquisar',
+                        hintText: ' pesquisar',
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0xFFDA4167),
+                            width: 1,
+                          ),
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(4.0),
+                            topRight: Radius.circular(4.0),
+                          ),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0xFFDA4167),
+                            width: 1,
+                          ),
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(4.0),
+                            topRight: Radius.circular(4.0),
+                          ),
+                        ),
+                        filled: true,
+                        fillColor: Color(0x53FFFFFF),
                         suffixIcon: textController.text.isNotEmpty
                             ? InkWell(
                                 onTap: () => setState(
@@ -82,7 +102,7 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                       ),
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Lexend Deca',
-                            color: Color(0xFFC4C4C5),
+                            color: Colors.white,
                             fontSize: 14,
                             fontWeight: FontWeight.normal,
                           ),
@@ -93,7 +113,7 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(4, 0, 4, 0),
                   child: Icon(
                     Icons.search_rounded,
-                    color: Color(0xFF95A1AC),
+                    color: Color(0xFFDA4167),
                     size: 30,
                   ),
                 ),
@@ -370,235 +390,237 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
           ),
         ),
       ),
-      body: Column(
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 0, 0),
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                  child: Text(
-                    'Escala da Sonoplastia',
-                    style: FlutterFlowTheme.of(context).subtitle1.override(
-                          fontFamily: 'Poppins',
-                          color: Color(0xFF30123A),
-                        ),
+      body: SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(5, 5, 0, 0),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                    child: Text(
+                      'Escala da Sonoplastia',
+                      style: FlutterFlowTheme.of(context).subtitle1.override(
+                            fontFamily: 'Poppins',
+                            color: Color(0xFF30123A),
+                          ),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          Expanded(
-            child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 15),
-              child: SingleChildScrollView(
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 1,
-                      decoration: BoxDecoration(),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 15),
-                        child: StreamBuilder<List<EscalaSonoplastiaRecord>>(
-                          stream: queryEscalaSonoplastiaRecord(),
-                          builder: (context, snapshot) {
-                            // Customize what your widget looks like when it's loading.
-                            if (!snapshot.hasData) {
-                              return Center(
-                                child: SizedBox(
-                                  width: 50,
-                                  height: 50,
-                                  child: SpinKitFoldingCube(
-                                    color: Color(0xFF30123A),
-                                    size: 50,
-                                  ),
-                                ),
-                              );
-                            }
-                            List<EscalaSonoplastiaRecord>
-                                listViewEscalaSonoplastiaRecordList =
-                                snapshot.data;
-                            return ListView.builder(
-                              padding: EdgeInsets.zero,
-                              primary: false,
-                              scrollDirection: Axis.vertical,
-                              itemCount:
-                                  listViewEscalaSonoplastiaRecordList.length,
-                              itemBuilder: (context, listViewIndex) {
-                                final listViewEscalaSonoplastiaRecord =
-                                    listViewEscalaSonoplastiaRecordList[
-                                        listViewIndex];
-                                return Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 5, 0, 5),
-                                  child: Container(
-                                    width: MediaQuery.of(context).size.width,
-                                    height: 90,
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                    ),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(8, 8, 8, 8),
-                                              child: ClipRRect(
-                                                borderRadius:
-                                                    BorderRadius.circular(8),
-                                                child: Image.network(
-                                                  valueOrDefault<String>(
-                                                    listViewEscalaSonoplastiaRecord
-                                                        .img,
-                                                    'https://cdn-icons-png.flaticon.com/512/1719/1719985.png',
-                                                  ),
-                                                  width: 74,
-                                                  height: 74,
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                        Expanded(
-                                          child: Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    8, 1, 0, 0),
-                                            child: SingleChildScrollView(
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  SingleChildScrollView(
-                                                    scrollDirection:
-                                                        Axis.horizontal,
-                                                    child: Row(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      children: [
-                                                        Text(
-                                                          listViewEscalaSonoplastiaRecord
-                                                              .nome,
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .subtitle1
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Lexend Deca',
-                                                                color: Color(
-                                                                    0xFF15212B),
-                                                                fontSize: 18,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w500,
-                                                              ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                  SingleChildScrollView(
-                                                    scrollDirection:
-                                                        Axis.horizontal,
-                                                    child: Row(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      children: [
-                                                        Text(
-                                                          'Data:  ',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyText1,
-                                                        ),
-                                                        Text(
-                                                          dateTimeFormat(
-                                                              'yMMMd',
-                                                              listViewEscalaSonoplastiaRecord
-                                                                  .data),
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyText2
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Lexend Deca',
-                                                                color: Color(
-                                                                    0xFF8B97A2),
-                                                                fontSize: 14,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .normal,
-                                                              ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                  SingleChildScrollView(
-                                                    scrollDirection:
-                                                        Axis.horizontal,
-                                                    child: Row(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      children: [
-                                                        Text(
-                                                          'Dia: ',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyText1,
-                                                        ),
-                                                        Text(
-                                                          dateTimeFormat(
-                                                              'EEEE',
-                                                              listViewEscalaSonoplastiaRecord
-                                                                  .data),
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyText1
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Lexend Deca',
-                                                                color: Color(
-                                                                    0xFF4B39EF),
-                                                                fontSize: 14,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w500,
-                                                              ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
+            Expanded(
+              child: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 15),
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Container(
+                        width: MediaQuery.of(context).size.width,
+                        height: MediaQuery.of(context).size.height * 1,
+                        decoration: BoxDecoration(),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 15),
+                          child: StreamBuilder<List<EscalaSonoplastiaRecord>>(
+                            stream: queryEscalaSonoplastiaRecord(),
+                            builder: (context, snapshot) {
+                              // Customize what your widget looks like when it's loading.
+                              if (!snapshot.hasData) {
+                                return Center(
+                                  child: SizedBox(
+                                    width: 50,
+                                    height: 50,
+                                    child: SpinKitFoldingCube(
+                                      color: Color(0xFF30123A),
+                                      size: 50,
                                     ),
                                   ),
                                 );
-                              },
-                            );
-                          },
+                              }
+                              List<EscalaSonoplastiaRecord>
+                                  listViewEscalaSonoplastiaRecordList =
+                                  snapshot.data;
+                              return ListView.builder(
+                                padding: EdgeInsets.zero,
+                                primary: false,
+                                scrollDirection: Axis.vertical,
+                                itemCount:
+                                    listViewEscalaSonoplastiaRecordList.length,
+                                itemBuilder: (context, listViewIndex) {
+                                  final listViewEscalaSonoplastiaRecord =
+                                      listViewEscalaSonoplastiaRecordList[
+                                          listViewIndex];
+                                  return Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0, 5, 0, 5),
+                                    child: Container(
+                                      width: MediaQuery.of(context).size.width,
+                                      height: 90,
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                      ),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(8, 8, 8, 8),
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(8),
+                                                  child: Image.network(
+                                                    valueOrDefault<String>(
+                                                      listViewEscalaSonoplastiaRecord
+                                                          .img,
+                                                      'https://cdn-icons-png.flaticon.com/512/1719/1719985.png',
+                                                    ),
+                                                    width: 74,
+                                                    height: 74,
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          Expanded(
+                                            child: Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(8, 1, 0, 0),
+                                              child: SingleChildScrollView(
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    SingleChildScrollView(
+                                                      scrollDirection:
+                                                          Axis.horizontal,
+                                                      child: Row(
+                                                        mainAxisSize:
+                                                            MainAxisSize.max,
+                                                        children: [
+                                                          Text(
+                                                            listViewEscalaSonoplastiaRecord
+                                                                .nome,
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .subtitle1
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Lexend Deca',
+                                                                  color: Color(
+                                                                      0xFF15212B),
+                                                                  fontSize: 18,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w500,
+                                                                ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    SingleChildScrollView(
+                                                      scrollDirection:
+                                                          Axis.horizontal,
+                                                      child: Row(
+                                                        mainAxisSize:
+                                                            MainAxisSize.max,
+                                                        children: [
+                                                          Text(
+                                                            'Data:  ',
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyText1,
+                                                          ),
+                                                          Text(
+                                                            dateTimeFormat(
+                                                                'yMMMd',
+                                                                listViewEscalaSonoplastiaRecord
+                                                                    .data),
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyText2
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Lexend Deca',
+                                                                  color: Color(
+                                                                      0xFF8B97A2),
+                                                                  fontSize: 14,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .normal,
+                                                                ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    SingleChildScrollView(
+                                                      scrollDirection:
+                                                          Axis.horizontal,
+                                                      child: Row(
+                                                        mainAxisSize:
+                                                            MainAxisSize.max,
+                                                        children: [
+                                                          Text(
+                                                            'Dia: ',
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyText1,
+                                                          ),
+                                                          Text(
+                                                            dateTimeFormat(
+                                                                'EEEE',
+                                                                listViewEscalaSonoplastiaRecord
+                                                                    .data),
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyText1
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Lexend Deca',
+                                                                  color: Color(
+                                                                      0xFF4B39EF),
+                                                                  fontSize: 14,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w500,
+                                                                ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  );
+                                },
+                              );
+                            },
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
