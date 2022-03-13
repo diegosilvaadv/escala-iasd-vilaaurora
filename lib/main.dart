@@ -115,9 +115,9 @@ class _NavBarPageState extends State<NavBarPage> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         onTap: (i) => setState(() => _currentPage = tabs.keys.toList()[i]),
-        backgroundColor: FlutterFlowTheme.of(context).primaryText,
-        selectedItemColor: FlutterFlowTheme.of(context).secondaryColor,
-        unselectedItemColor: FlutterFlowTheme.of(context).alternate,
+        backgroundColor: Color(0xFF30123A),
+        selectedItemColor: Color(0xFFDA4167),
+        unselectedItemColor: Colors.white,
         showSelectedLabels: false,
         showUnselectedLabels: false,
         type: BottomNavigationBarType.fixed,
@@ -143,7 +143,7 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.library_music,
               size: 24,
             ),
-            label: 'Sonoplastia',
+            label: 'Shop',
             tooltip: '',
           )
         ],

@@ -23,19 +23,51 @@ class _HomePageWidgetState extends State<HomePageWidget> {
       appBar: AppBar(
         backgroundColor: Color(0xFF30123A),
         automaticallyImplyLeading: false,
-        title: Text(
-          'Escala - IASD',
-          style: FlutterFlowTheme.of(context).bodyText1.override(
-                fontFamily: 'Poppins',
-                color: Colors.white,
-                fontSize: 30,
-              ),
+        title: Column(
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  'ESCALA',
+                  textAlign: TextAlign.center,
+                  style: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Poppins',
+                        color: Color(0xFFE5E5E5),
+                        fontWeight: FontWeight.w300,
+                      ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  'IASD Vila Aurora',
+                  textAlign: TextAlign.center,
+                  style: FlutterFlowTheme.of(context).title3.override(
+                        fontFamily: 'Poppins',
+                        color: Colors.white,
+                      ),
+                ),
+              ],
+            ),
+          ],
         ),
         actions: [],
         centerTitle: true,
         elevation: 4,
       ),
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      endDrawer: Drawer(
+        elevation: 16,
+      ),
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
@@ -146,7 +178,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   ),
                                 ),
                                 Icon(
-                                  Icons.person,
+                                  Icons.group,
                                   color: Colors.white,
                                   size: 40,
                                 ),
@@ -342,7 +374,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   ),
                                 ),
                                 Icon(
-                                  Icons.school_rounded,
+                                  Icons.person_search_outlined,
                                   color: Colors.white,
                                   size: 40,
                                 ),

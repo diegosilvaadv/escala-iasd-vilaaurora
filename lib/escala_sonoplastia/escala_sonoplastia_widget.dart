@@ -80,6 +80,7 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                                       controller: textController,
                                       obscureText: false,
                                       decoration: InputDecoration(
+                                        labelText: 'Search events here...',
                                         enabledBorder: UnderlineInputBorder(
                                           borderSide: BorderSide(
                                             color: Color(0x00000000),
@@ -211,7 +212,8 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                                                         MainAxisSize.max,
                                                     children: [
                                                       Text(
-                                                        'Store/Location Name',
+                                                        listViewEscalaSonoplastiaRecord
+                                                            .nome,
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -234,7 +236,10 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                                                         MainAxisSize.max,
                                                     children: [
                                                       Text(
-                                                        '123 Address St, City, ST',
+                                                        dateTimeFormat(
+                                                            'MMMMEEEEd',
+                                                            listViewEscalaSonoplastiaRecord
+                                                                .data),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
