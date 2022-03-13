@@ -373,7 +373,6 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
               ),
               Expanded(
                 child: SingleChildScrollView(
-                  primary: false,
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
