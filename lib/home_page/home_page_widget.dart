@@ -21,7 +21,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).primaryColor,
+        backgroundColor: Color(0xFF30123A),
         automaticallyImplyLeading: false,
         title: Text(
           'Escala - IASD',
@@ -53,6 +53,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       mainAxisSpacing: 10,
                       childAspectRatio: 1,
                     ),
+                    primary: false,
+                    shrinkWrap: true,
                     scrollDirection: Axis.vertical,
                     children: [
                       InkWell(
@@ -76,7 +78,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(1, 1, 1, 1),
+                            padding: EdgeInsetsDirectional.fromSTEB(1, 5, 1, 1),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -90,24 +92,263 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         .override(
                                           fontFamily: 'Poppins',
                                           color: Colors.white,
+                                          fontSize: 13,
                                         ),
                                   ),
                                 ),
                                 Icon(
                                   Icons.queue_music_rounded,
                                   color: Colors.white,
-                                  size: 50,
+                                  size: 40,
                                 ),
                               ],
                             ),
                           ),
                         ),
                       ),
-                      Container(
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                          color: Color(0xFFEEEEEE),
+                      InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            PageTransition(
+                              type: PageTransitionType.fade,
+                              duration: Duration(milliseconds: 500),
+                              reverseDuration: Duration(milliseconds: 500),
+                              child:
+                                  NavBarPage(initialPage: 'escala_sonoplastia'),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            color: Color(0xFF4F1867),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(1, 5, 1, 1),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Align(
+                                  alignment: AlignmentDirectional(0, 0),
+                                  child: AutoSizeText(
+                                    'Escala \nPregadores',
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .subtitle1
+                                        .override(
+                                          fontFamily: 'Poppins',
+                                          color: Colors.white,
+                                          fontSize: 13,
+                                        ),
+                                  ),
+                                ),
+                                Icon(
+                                  Icons.person,
+                                  color: Colors.white,
+                                  size: 40,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            PageTransition(
+                              type: PageTransitionType.fade,
+                              duration: Duration(milliseconds: 500),
+                              reverseDuration: Duration(milliseconds: 500),
+                              child:
+                                  NavBarPage(initialPage: 'escala_sonoplastia'),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            color: Color(0xFF4F1867),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(1, 5, 1, 1),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Align(
+                                  alignment: AlignmentDirectional(0, 0),
+                                  child: AutoSizeText(
+                                    'Escala \nMusical',
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .subtitle1
+                                        .override(
+                                          fontFamily: 'Poppins',
+                                          color: Colors.white,
+                                          fontSize: 13,
+                                        ),
+                                  ),
+                                ),
+                                Icon(
+                                  Icons.mic_external_on,
+                                  color: Colors.white,
+                                  size: 40,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            PageTransition(
+                              type: PageTransitionType.fade,
+                              duration: Duration(milliseconds: 500),
+                              reverseDuration: Duration(milliseconds: 500),
+                              child:
+                                  NavBarPage(initialPage: 'escala_sonoplastia'),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            color: Color(0xFF4F1867),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(1, 5, 1, 1),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Align(
+                                  alignment: AlignmentDirectional(0, 0),
+                                  child: AutoSizeText(
+                                    'Escala \nLimpeza',
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .subtitle1
+                                        .override(
+                                          fontFamily: 'Poppins',
+                                          color: Colors.white,
+                                          fontSize: 13,
+                                        ),
+                                  ),
+                                ),
+                                Icon(
+                                  Icons.cleaning_services,
+                                  color: Colors.white,
+                                  size: 40,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            PageTransition(
+                              type: PageTransitionType.fade,
+                              duration: Duration(milliseconds: 500),
+                              reverseDuration: Duration(milliseconds: 500),
+                              child:
+                                  NavBarPage(initialPage: 'escala_sonoplastia'),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            color: Color(0xFF4F1867),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(1, 5, 1, 1),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Align(
+                                  alignment: AlignmentDirectional(0, 0),
+                                  child: AutoSizeText(
+                                    'Escala \nEsc. Sabatina',
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .subtitle1
+                                        .override(
+                                          fontFamily: 'Poppins',
+                                          color: Colors.white,
+                                          fontSize: 13,
+                                        ),
+                                  ),
+                                ),
+                                Icon(
+                                  Icons.school_rounded,
+                                  color: Colors.white,
+                                  size: 40,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            PageTransition(
+                              type: PageTransitionType.fade,
+                              duration: Duration(milliseconds: 500),
+                              reverseDuration: Duration(milliseconds: 500),
+                              child:
+                                  NavBarPage(initialPage: 'escala_sonoplastia'),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            color: Color(0xFF4F1867),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(1, 5, 1, 1),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Align(
+                                  alignment: AlignmentDirectional(0, 0),
+                                  child: AutoSizeText(
+                                    'Escala \nPastoral',
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .subtitle1
+                                        .override(
+                                          fontFamily: 'Poppins',
+                                          color: Colors.white,
+                                          fontSize: 13,
+                                        ),
+                                  ),
+                                ),
+                                Icon(
+                                  Icons.school_rounded,
+                                  color: Colors.white,
+                                  size: 40,
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
                       ),
                     ],
