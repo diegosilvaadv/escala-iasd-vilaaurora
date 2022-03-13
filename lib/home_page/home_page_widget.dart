@@ -1,6 +1,7 @@
-import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../main.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -39,56 +40,77 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(10, 10, 0, 0),
+            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Expanded(
-                  child: StreamBuilder<List<EscalaSonoplastiaRecord>>(
-                    stream: queryEscalaSonoplastiaRecord(),
-                    builder: (context, snapshot) {
-                      // Customize what your widget looks like when it's loading.
-                      if (!snapshot.hasData) {
-                        return Center(
-                          child: SizedBox(
-                            width: 50,
-                            height: 50,
-                            child: SpinKitDoubleBounce(
-                              color: Color(0xFFFCA311),
-                              size: 50,
+                  child: GridView(
+                    padding: EdgeInsets.zero,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3,
+                      crossAxisSpacing: 10,
+                      mainAxisSpacing: 10,
+                      childAspectRatio: 1,
+                    ),
+                    scrollDirection: Axis.vertical,
+                    children: [
+                      InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            PageTransition(
+                              type: PageTransitionType.fade,
+                              duration: Duration(milliseconds: 500),
+                              reverseDuration: Duration(milliseconds: 500),
+                              child:
+                                  NavBarPage(initialPage: 'escala_sonoplastia'),
                             ),
-                          ),
-                        );
-                      }
-                      List<EscalaSonoplastiaRecord>
-                          listViewEscalaSonoplastiaRecordList = snapshot.data;
-                      return ListView.builder(
-                        padding: EdgeInsets.zero,
-                        scrollDirection: Axis.vertical,
-                        itemCount: listViewEscalaSonoplastiaRecordList.length,
-                        itemBuilder: (context, listViewIndex) {
-                          final listViewEscalaSonoplastiaRecord =
-                              listViewEscalaSonoplastiaRecordList[
-                                  listViewIndex];
-                          return Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Text(
-                                'Nome: ',
-                                style: FlutterFlowTheme.of(context).bodyText1,
-                              ),
-                              Text(
-                                valueOrDefault<String>(
-                                  listViewEscalaSonoplastiaRecord.nome,
-                                  '...',
-                                ),
-                                style: FlutterFlowTheme.of(context).bodyText1,
-                              ),
-                            ],
                           );
                         },
-                      );
-                    },
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            color: Color(0xFF4F1867),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(1, 1, 1, 1),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Align(
+                                  alignment: AlignmentDirectional(0, 0),
+                                  child: AutoSizeText(
+                                    'Escala \nSonoplastia',
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .subtitle1
+                                        .override(
+                                          fontFamily: 'Poppins',
+                                          color: Colors.white,
+                                        ),
+                                  ),
+                                ),
+                                Icon(
+                                  Icons.queue_music_rounded,
+                                  color: Colors.white,
+                                  size: 50,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 100,
+                        height: 100,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFEEEEEE),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
