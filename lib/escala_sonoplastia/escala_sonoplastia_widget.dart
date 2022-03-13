@@ -428,8 +428,11 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                                             borderRadius:
                                                 BorderRadius.circular(8),
                                             child: Image.network(
-                                              listViewEscalaSonoplastiaRecord
-                                                  .img,
+                                              valueOrDefault<String>(
+                                                listViewEscalaSonoplastiaRecord
+                                                    .img,
+                                                'https://cdn-icons-png.flaticon.com/512/1719/1719985.png',
+                                              ),
                                               width: 74,
                                               height: 74,
                                               fit: BoxFit.cover,
