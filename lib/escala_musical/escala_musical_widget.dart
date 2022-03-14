@@ -1,4 +1,9 @@
 import '../backend/backend.dart';
+import '../escala_escola_sabatina/escala_escola_sabatina_widget.dart';
+import '../escala_limpeza/escala_limpeza_widget.dart';
+import '../escala_pastoral/escala_pastoral_widget.dart';
+import '../escala_pregadores/escala_pregadores_widget.dart';
+import '../escala_sonoplastia/escala_sonoplastia_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../main.dart';
@@ -202,146 +207,211 @@ class _EscalaMusicalWidgetState extends State<EscalaMusicalWidget> {
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(10, 15, 0, 0),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(
-                        Icons.queue_music,
-                        color: Colors.black,
-                        size: 30,
+                child: InkWell(
+                  onTap: () async {
+                    await Navigator.push(
+                      context,
+                      PageTransition(
+                        type: PageTransitionType.rightToLeft,
+                        duration: Duration(milliseconds: 600),
+                        reverseDuration: Duration(milliseconds: 600),
+                        child: EscalaSonoplastiaWidget(),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(7, 0, 0, 0),
-                        child: Text(
-                          'Escala Sonoplastia',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Color(0xFF151515),
-                                    fontSize: 24,
-                                  ),
+                    );
+                  },
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(
+                          Icons.queue_music,
+                          color: Colors.black,
+                          size: 30,
                         ),
-                      ),
-                    ],
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(7, 0, 0, 0),
+                          child: Text(
+                            'Escala Sonoplastia',
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFF151515),
+                                      fontSize: 24,
+                                    ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(10, 15, 0, 0),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(
-                        Icons.people,
-                        color: Colors.black,
-                        size: 30,
+                child: InkWell(
+                  onTap: () async {
+                    await Navigator.push(
+                      context,
+                      PageTransition(
+                        type: PageTransitionType.rightToLeft,
+                        duration: Duration(milliseconds: 600),
+                        reverseDuration: Duration(milliseconds: 600),
+                        child: EscalaPregadoresWidget(),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(7, 0, 0, 0),
-                        child: Text(
-                          'Escala Pregadores',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Color(0xFF151515),
-                                    fontSize: 24,
-                                  ),
+                    );
+                  },
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(
+                          Icons.people,
+                          color: Colors.black,
+                          size: 30,
                         ),
-                      ),
-                    ],
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(7, 0, 0, 0),
+                          child: Text(
+                            'Escala Pregadores',
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFF151515),
+                                      fontSize: 24,
+                                    ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(10, 15, 0, 0),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(
-                        Icons.cleaning_services,
-                        color: Colors.black,
-                        size: 30,
+                child: InkWell(
+                  onTap: () async {
+                    await Navigator.push(
+                      context,
+                      PageTransition(
+                        type: PageTransitionType.rightToLeft,
+                        duration: Duration(milliseconds: 600),
+                        reverseDuration: Duration(milliseconds: 600),
+                        child: EscalaLimpezaWidget(),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(7, 0, 0, 0),
-                        child: Text(
-                          'Escala Limpeza',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Color(0xFF151515),
-                                    fontSize: 24,
-                                  ),
+                    );
+                  },
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(
+                          Icons.cleaning_services,
+                          color: Colors.black,
+                          size: 30,
                         ),
-                      ),
-                    ],
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(7, 0, 0, 0),
+                          child: Text(
+                            'Escala Limpeza',
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFF151515),
+                                      fontSize: 24,
+                                    ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(10, 15, 0, 0),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(
-                        Icons.school_rounded,
-                        color: Colors.black,
-                        size: 30,
+                child: InkWell(
+                  onTap: () async {
+                    await Navigator.push(
+                      context,
+                      PageTransition(
+                        type: PageTransitionType.rightToLeft,
+                        duration: Duration(milliseconds: 100),
+                        reverseDuration: Duration(milliseconds: 100),
+                        child: EscalaEscolaSabatinaWidget(),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(7, 0, 0, 0),
-                        child: AutoSizeText(
-                          'Escala Esc. Sabatina',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Color(0xFF151515),
-                                    fontSize: 24,
-                                  ),
+                    );
+                  },
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(
+                          Icons.school_rounded,
+                          color: Colors.black,
+                          size: 30,
                         ),
-                      ),
-                    ],
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(7, 0, 0, 0),
+                          child: AutoSizeText(
+                            'Escala Esc. Sabatina',
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFF151515),
+                                      fontSize: 24,
+                                    ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(10, 15, 0, 0),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(
-                        Icons.person_search_outlined,
-                        color: Colors.black,
-                        size: 30,
+                child: InkWell(
+                  onTap: () async {
+                    await Navigator.push(
+                      context,
+                      PageTransition(
+                        type: PageTransitionType.rightToLeft,
+                        duration: Duration(milliseconds: 600),
+                        reverseDuration: Duration(milliseconds: 600),
+                        child: EscalaPastoralWidget(),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(7, 0, 0, 0),
-                        child: AutoSizeText(
-                          'Escala Pastoral',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Color(0xFF151515),
-                                    fontSize: 24,
-                                  ),
+                    );
+                  },
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(
+                          Icons.person_search_outlined,
+                          color: Colors.black,
+                          size: 30,
                         ),
-                      ),
-                    ],
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(7, 0, 0, 0),
+                          child: AutoSizeText(
+                            'Escala Pastoral',
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFF151515),
+                                      fontSize: 24,
+                                    ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -383,8 +453,8 @@ class _EscalaMusicalWidgetState extends State<EscalaMusicalWidget> {
                       decoration: BoxDecoration(),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 15),
-                        child: StreamBuilder<List<EscalaSonoplastiaRecord>>(
-                          stream: queryEscalaSonoplastiaRecord(),
+                        child: StreamBuilder<List<EscalaMusicalRecord>>(
+                          stream: queryEscalaMusicalRecord(),
                           builder: (context, snapshot) {
                             // Customize what your widget looks like when it's loading.
                             if (!snapshot.hasData) {
@@ -399,18 +469,16 @@ class _EscalaMusicalWidgetState extends State<EscalaMusicalWidget> {
                                 ),
                               );
                             }
-                            List<EscalaSonoplastiaRecord>
-                                listViewEscalaSonoplastiaRecordList =
-                                snapshot.data;
+                            List<EscalaMusicalRecord>
+                                listViewEscalaMusicalRecordList = snapshot.data;
                             return ListView.builder(
                               padding: EdgeInsets.zero,
                               primary: false,
                               scrollDirection: Axis.vertical,
-                              itemCount:
-                                  listViewEscalaSonoplastiaRecordList.length,
+                              itemCount: listViewEscalaMusicalRecordList.length,
                               itemBuilder: (context, listViewIndex) {
-                                final listViewEscalaSonoplastiaRecord =
-                                    listViewEscalaSonoplastiaRecordList[
+                                final listViewEscalaMusicalRecord =
+                                    listViewEscalaMusicalRecordList[
                                         listViewIndex];
                                 return Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
@@ -435,9 +503,9 @@ class _EscalaMusicalWidgetState extends State<EscalaMusicalWidget> {
                                                     BorderRadius.circular(8),
                                                 child: Image.network(
                                                   valueOrDefault<String>(
-                                                    listViewEscalaSonoplastiaRecord
+                                                    listViewEscalaMusicalRecord
                                                         .img,
-                                                    'https://cdn-icons-png.flaticon.com/512/1719/1719985.png',
+                                                    'https://cdn-icons.flaticon.com/png/512/1194/premium/1194419.png?token=exp=1647219507~hmac=f9b385bbcec40edc5a5f880c01c480a4',
                                                   ),
                                                   width: 74,
                                                   height: 74,
@@ -468,7 +536,7 @@ class _EscalaMusicalWidgetState extends State<EscalaMusicalWidget> {
                                                           MainAxisSize.max,
                                                       children: [
                                                         Text(
-                                                          listViewEscalaSonoplastiaRecord
+                                                          listViewEscalaMusicalRecord
                                                               .nome,
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -502,8 +570,8 @@ class _EscalaMusicalWidgetState extends State<EscalaMusicalWidget> {
                                                         ),
                                                         Text(
                                                           dateTimeFormat(
-                                                              'yMMMd',
-                                                              listViewEscalaSonoplastiaRecord
+                                                              'd/M/y',
+                                                              listViewEscalaMusicalRecord
                                                                   .data),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -538,7 +606,7 @@ class _EscalaMusicalWidgetState extends State<EscalaMusicalWidget> {
                                                         Text(
                                                           dateTimeFormat(
                                                               'EEEE',
-                                                              listViewEscalaSonoplastiaRecord
+                                                              listViewEscalaMusicalRecord
                                                                   .data),
                                                           style: FlutterFlowTheme
                                                                   .of(context)

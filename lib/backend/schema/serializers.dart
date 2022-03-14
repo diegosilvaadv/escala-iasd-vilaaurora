@@ -1,6 +1,11 @@
 import 'package:built_value/standard_json_plugin.dart';
 
 import 'escala_sonoplastia_record.dart';
+import 'escala_pregadores_record.dart';
+import 'escala_musical_record.dart';
+import 'escala_limpeza_record.dart';
+import 'escala_esc_sabatina_record.dart';
+import 'escala_pastoral_record.dart';
 
 import 'index.dart';
 
@@ -12,6 +17,11 @@ const kDocumentReferenceField = 'Document__Reference__Field';
 
 @SerializersFor(const [
   EscalaSonoplastiaRecord,
+  EscalaPregadoresRecord,
+  EscalaMusicalRecord,
+  EscalaLimpezaRecord,
+  EscalaEscSabatinaRecord,
+  EscalaPastoralRecord,
 ])
 final Serializers serializers = (_$serializers.toBuilder()
       ..add(DocumentReferenceSerializer())
