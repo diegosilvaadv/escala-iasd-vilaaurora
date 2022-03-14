@@ -28,46 +28,51 @@ class _HomePageWidgetState extends State<HomePageWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: Color(0x0030123A),
+        backgroundColor: Color(0xFF30123A),
         automaticallyImplyLeading: false,
         title: Column(
           mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 3, 0, 0),
+            Align(
+              alignment: AlignmentDirectional(0, 0),
+              child: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 3, 0, 0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      'ESCALA',
+                      textAlign: TextAlign.center,
+                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                            fontFamily: 'Poppins',
+                            color: Color(0xFFE5E5E5),
+                            fontWeight: FontWeight.w300,
+                          ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Align(
+              alignment: AlignmentDirectional(0, 0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'ESCALA',
+                    'IASD Vila Aurora',
                     textAlign: TextAlign.center,
-                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                    style: FlutterFlowTheme.of(context).title3.override(
                           fontFamily: 'Poppins',
-                          color: Color(0xFF424242),
-                          fontWeight: FontWeight.w300,
+                          color: Color(0xFFDA4167),
                         ),
                   ),
                 ],
               ),
-            ),
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(
-                  'IASD Vila Aurora',
-                  textAlign: TextAlign.center,
-                  style: FlutterFlowTheme.of(context).title3.override(
-                        fontFamily: 'Poppins',
-                        color: Color(0xFF4F1867),
-                      ),
-                ),
-              ],
             ),
           ],
         ),
