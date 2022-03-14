@@ -101,23 +101,32 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       PageController(initialPage: 0),
                                   scrollDirection: Axis.horizontal,
                                   children: [
-                                    Image.asset(
-                                      'assets/images/Redes_sociais_2Artboard_1_9.png',
-                                      width: 100,
-                                      height: 100,
-                                      fit: BoxFit.cover,
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(10),
+                                      child: Image.asset(
+                                        'assets/images/Redes_sociais_2Artboard_1_9.png',
+                                        width: 100,
+                                        height: 100,
+                                        fit: BoxFit.cover,
+                                      ),
                                     ),
-                                    Image.asset(
-                                      'assets/images/_Ame_o_seu_proximo_como_a_si_mesmo[b]._Nao_existe_mandamento_maior_do_que_estes._Marcos_12-29.png',
-                                      width: 100,
-                                      height: 100,
-                                      fit: BoxFit.cover,
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(10),
+                                      child: Image.asset(
+                                        'assets/images/_Ame_o_seu_proximo_como_a_si_mesmo[b]._Nao_existe_mandamento_maior_do_que_estes._Marcos_12-29.png',
+                                        width: 100,
+                                        height: 100,
+                                        fit: BoxFit.cover,
+                                      ),
                                     ),
-                                    Image.asset(
-                                      'assets/images/O_Que__F.png',
-                                      width: 100,
-                                      height: 100,
-                                      fit: BoxFit.cover,
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(10),
+                                      child: Image.asset(
+                                        'assets/images/03.png',
+                                        width: 100,
+                                        height: 100,
+                                        fit: BoxFit.cover,
+                                      ),
                                     ),
                                   ],
                                 ),

@@ -1,4 +1,5 @@
 import '../backend/backend.dart';
+import '../escala_pregadores/escala_pregadores_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../main.dart';
@@ -203,30 +204,43 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(10, 15, 0, 0),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(
-                        Icons.group,
-                        color: Colors.black,
-                        size: 30,
+                child: InkWell(
+                  onTap: () async {
+                    await Navigator.push(
+                      context,
+                      PageTransition(
+                        type: PageTransitionType.rightToLeft,
+                        duration: Duration(milliseconds: 600),
+                        reverseDuration: Duration(milliseconds: 600),
+                        child: EscalaPregadoresWidget(),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(7, 0, 0, 0),
-                        child: Text(
-                          'Escala Pregadores',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Color(0xFF151515),
-                                    fontSize: 24,
-                                  ),
+                    );
+                  },
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(
+                          Icons.group,
+                          color: Colors.black,
+                          size: 30,
                         ),
-                      ),
-                    ],
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(7, 0, 0, 0),
+                          child: Text(
+                            'Escala Pregadores',
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFF151515),
+                                      fontSize: 24,
+                                    ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
