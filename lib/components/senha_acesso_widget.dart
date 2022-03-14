@@ -114,7 +114,7 @@ class _SenhaAcessoWidgetState extends State<SenhaAcessoWidget> {
                         child: NavBarPage(initialPage: 'HomePage'),
                       ),
                     );
-                    if (('123') == '123') {
+                    if (('123') != '123') {
                       await Navigator.push(
                         context,
                         PageTransition(
