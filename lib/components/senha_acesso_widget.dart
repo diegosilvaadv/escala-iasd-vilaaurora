@@ -1,3 +1,4 @@
+import '../bemvindo/bemvindo_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -105,16 +106,7 @@ class _SenhaAcessoWidgetState extends State<SenhaAcessoWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 8, 0),
                 child: FFButtonWidget(
                   onPressed: () async {
-                    await Navigator.push(
-                      context,
-                      PageTransition(
-                        type: PageTransitionType.fade,
-                        duration: Duration(milliseconds: 500),
-                        reverseDuration: Duration(milliseconds: 500),
-                        child: NavBarPage(initialPage: 'HomePage'),
-                      ),
-                    );
-                    if (('123') != '123') {
+                    if (('123') == '123') {
                       await Navigator.push(
                         context,
                         PageTransition(
@@ -131,7 +123,7 @@ class _SenhaAcessoWidgetState extends State<SenhaAcessoWidget> {
                           type: PageTransitionType.fade,
                           duration: Duration(milliseconds: 500),
                           reverseDuration: Duration(milliseconds: 500),
-                          child: NavBarPage(initialPage: 'info'),
+                          child: BemvindoWidget(),
                         ),
                       );
                     }
