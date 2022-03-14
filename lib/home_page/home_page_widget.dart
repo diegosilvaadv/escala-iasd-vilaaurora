@@ -101,20 +101,20 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       PageController(initialPage: 0),
                                   scrollDirection: Axis.horizontal,
                                   children: [
-                                    Image.network(
-                                      'https://picsum.photos/seed/672/600',
+                                    Image.asset(
+                                      'assets/images/Redes_sociais_2Artboard_1_9.png',
                                       width: 100,
                                       height: 100,
                                       fit: BoxFit.cover,
                                     ),
-                                    Image.network(
-                                      'https://picsum.photos/seed/340/600',
+                                    Image.asset(
+                                      'assets/images/_Ame_o_seu_proximo_como_a_si_mesmo[b]._Nao_existe_mandamento_maior_do_que_estes._Marcos_12-29.png',
                                       width: 100,
                                       height: 100,
                                       fit: BoxFit.cover,
                                     ),
-                                    Image.network(
-                                      'https://picsum.photos/seed/911/600',
+                                    Image.asset(
+                                      'assets/images/O_Que__F.png',
                                       width: 100,
                                       height: 100,
                                       fit: BoxFit.cover,
@@ -126,7 +126,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 alignment: AlignmentDirectional(0, 1),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 0, 0, 10),
+                                      0, 0, 0, 20),
                                   child: SmoothPageIndicator(
                                     controller: pageViewController ??=
                                         PageController(initialPage: 0),
@@ -143,10 +143,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       expansionFactor: 2,
                                       spacing: 8,
                                       radius: 16,
-                                      dotWidth: 16,
+                                      dotWidth: 30,
                                       dotHeight: 16,
-                                      dotColor: Color(0xFF9E9E9E),
-                                      activeDotColor: Color(0xFF3F51B5),
+                                      dotColor: Color(0xFFDA4167),
+                                      activeDotColor: Color(0xFF30123A),
                                       paintStyle: PaintingStyle.fill,
                                     ),
                                   ),
