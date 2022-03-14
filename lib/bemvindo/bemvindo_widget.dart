@@ -1,7 +1,7 @@
+import '../components/senha_acesso_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -321,14 +321,16 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
                   child: FFButtonWidget(
                     onPressed: () async {
-                      await Navigator.push(
-                        context,
-                        PageTransition(
-                          type: PageTransitionType.fade,
-                          duration: Duration(milliseconds: 500),
-                          reverseDuration: Duration(milliseconds: 500),
-                          child: NavBarPage(initialPage: 'HomePage'),
-                        ),
+                      await showModalBottomSheet(
+                        isScrollControlled: true,
+                        backgroundColor: Colors.transparent,
+                        context: context,
+                        builder: (context) {
+                          return Padding(
+                            padding: MediaQuery.of(context).viewInsets,
+                            child: SenhaAcessoWidget(),
+                          );
+                        },
                       );
                     },
                     text: 'Continue',
