@@ -124,6 +124,16 @@ class _SenhaAcessoWidgetState extends State<SenhaAcessoWidget> {
                           child: NavBarPage(initialPage: 'HomePage'),
                         ),
                       );
+                    } else {
+                      await Navigator.push(
+                        context,
+                        PageTransition(
+                          type: PageTransitionType.fade,
+                          duration: Duration(milliseconds: 500),
+                          reverseDuration: Duration(milliseconds: 500),
+                          child: NavBarPage(initialPage: 'info'),
+                        ),
+                      );
                     }
                   },
                   text: 'Entrar',
