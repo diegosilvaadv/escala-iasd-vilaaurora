@@ -28,11 +28,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: Color(0xFF30123A),
+        backgroundColor: Color(0x0030123A),
         automaticallyImplyLeading: false,
         title: Column(
           mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 3, 0, 0),
@@ -46,7 +47,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyText1.override(
                           fontFamily: 'Poppins',
-                          color: Color(0xFFE5E5E5),
+                          color: Color(0xFF424242),
                           fontWeight: FontWeight.w300,
                         ),
                   ),
@@ -63,7 +64,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   textAlign: TextAlign.center,
                   style: FlutterFlowTheme.of(context).title3.override(
                         fontFamily: 'Poppins',
-                        color: Colors.white,
+                        color: Color(0xFF4F1867),
                       ),
                 ),
               ],
