@@ -509,7 +509,7 @@ class _EscalaEscolaSabatinaWidgetState
                                                   valueOrDefault<String>(
                                                     listViewEscalaEscSabatinaRecord
                                                         .img,
-                                                    'https://cdn-icons.flaticon.com/png/512/3413/premium/3413591.png?token=exp=1647220011~hmac=0940f3d477cbd0b58e7f3d9092ae636c',
+                                                    'https://play-lh.googleusercontent.com/hl6xr67QAbA6BCvdOdqkyaro4OjJ-6XDF89CEmrf_DUMVKgIo8Jsu9aPUcQBfhf-8OSI',
                                                   ),
                                                   width: 74,
                                                   height: 74,

@@ -503,12 +503,8 @@ class _EscalaPastoralWidgetState extends State<EscalaPastoralWidget> {
                                               child: ClipRRect(
                                                 borderRadius:
                                                     BorderRadius.circular(8),
-                                                child: Image.network(
-                                                  valueOrDefault<String>(
-                                                    listViewEscalaPastoralRecord
-                                                        .img,
-                                                    'https://cdn-icons-png.flaticon.com/512/703/703220.png',
-                                                  ),
+                                                child: Image.asset(
+                                                  'assets/images/Sidnei-da-Silva-Guimares1_(2).png',
                                                   width: 74,
                                                   height: 74,
                                                   fit: BoxFit.cover,
