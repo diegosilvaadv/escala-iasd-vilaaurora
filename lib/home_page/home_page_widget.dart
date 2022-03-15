@@ -9,6 +9,7 @@ import '../flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -43,14 +44,17 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text(
-                      'ESCALA',
-                      textAlign: TextAlign.center,
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Poppins',
-                            color: Color(0xFFE5E5E5),
-                            fontWeight: FontWeight.w300,
-                          ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                      child: Text(
+                        'ESCALA',
+                        textAlign: TextAlign.center,
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                              fontFamily: 'Poppins',
+                              color: Color(0xFFE5E5E5),
+                              fontWeight: FontWeight.w300,
+                            ),
+                      ),
                     ),
                   ],
                 ),
@@ -63,20 +67,56 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(
-                    'IASD Vila Aurora',
-                    textAlign: TextAlign.center,
-                    style: FlutterFlowTheme.of(context).title3.override(
-                          fontFamily: 'Poppins',
-                          color: Color(0xFFDA4167),
-                        ),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                    child: Text(
+                      'IASD Vila Aurora',
+                      textAlign: TextAlign.center,
+                      style: FlutterFlowTheme.of(context).title3.override(
+                            fontFamily: 'Poppins',
+                            color: Color(0xFFDA4167),
+                          ),
+                    ),
                   ),
                 ],
               ),
             ),
           ],
         ),
-        actions: [],
+        actions: [
+          Visibility(
+            visible: Theme.of(context).brightness == Brightness.dark ?? true,
+            child: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 15, 15, 0),
+              child: InkWell(
+                onTap: () async {
+                  setDarkModeSetting(context, ThemeMode.light);
+                },
+                child: FaIcon(
+                  FontAwesomeIcons.solidSun,
+                  color: FlutterFlowTheme.of(context).primaryText,
+                  size: 30,
+                ),
+              ),
+            ),
+          ),
+          Visibility(
+            visible: !(Theme.of(context).brightness == Brightness.dark) ?? true,
+            child: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 15, 15, 0),
+              child: InkWell(
+                onTap: () async {
+                  setDarkModeSetting(context, ThemeMode.dark);
+                },
+                child: FaIcon(
+                  FontAwesomeIcons.solidMoon,
+                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                  size: 30,
+                ),
+              ),
+            ),
+          ),
+        ],
         centerTitle: true,
         elevation: 4,
       ),
