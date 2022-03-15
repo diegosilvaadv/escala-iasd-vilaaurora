@@ -22,7 +22,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Color(0xFF14181B),
+      backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
       body: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -33,7 +33,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  'assets/images/logo_white.png',
+                  'assets/images/channels4_profile-removebg-preview.png',
                   width: 200,
                   height: 100,
                   fit: BoxFit.fitHeight,
@@ -93,7 +93,9 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                               .title1
                                               .override(
                                                 fontFamily: 'Lexend Deca',
-                                                color: Colors.white,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryText,
                                                 fontSize: 32,
                                                 fontWeight: FontWeight.bold,
                                               ),
@@ -116,7 +118,9 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                               .subtitle2
                                               .override(
                                                 fontFamily: 'Lexend Deca',
-                                                color: Color(0x99FFFFFF),
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryText,
                                                 fontSize: 16,
                                                 fontWeight: FontWeight.normal,
                                               ),
@@ -166,7 +170,9 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                               .title1
                                               .override(
                                                 fontFamily: 'Lexend Deca',
-                                                color: Colors.white,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryText,
                                                 fontSize: 32,
                                                 fontWeight: FontWeight.bold,
                                               ),
@@ -189,7 +195,9 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                               .subtitle2
                                               .override(
                                                 fontFamily: 'Lexend Deca',
-                                                color: Color(0x99FFFFFF),
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryText,
                                                 fontSize: 16,
                                                 fontWeight: FontWeight.normal,
                                               ),
@@ -239,7 +247,9 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                               .title1
                                               .override(
                                                 fontFamily: 'Lexend Deca',
-                                                color: Colors.white,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryText,
                                                 fontSize: 32,
                                                 fontWeight: FontWeight.bold,
                                               ),
@@ -262,7 +272,9 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                               .subtitle2
                                               .override(
                                                 fontFamily: 'Lexend Deca',
-                                                color: Color(0xFF82878C),
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryText,
                                                 fontSize: 16,
                                                 fontWeight: FontWeight.normal,
                                               ),
@@ -298,8 +310,10 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                               radius: 16,
                               dotWidth: 16,
                               dotHeight: 4,
-                              dotColor: Color(0x8AC6CAD4),
-                              activeDotColor: Colors.white,
+                              dotColor:
+                                  FlutterFlowTheme.of(context).secondaryText,
+                              activeDotColor:
+                                  FlutterFlowTheme.of(context).primaryText,
                               paintStyle: PaintingStyle.fill,
                             ),
                           ),
@@ -337,11 +351,11 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                     options: FFButtonOptions(
                       width: 200,
                       height: 50,
-                      color: Color(0xFF262D34),
+                      color: FlutterFlowTheme.of(context).primaryText,
                       textStyle:
                           FlutterFlowTheme.of(context).subtitle1.override(
                                 fontFamily: 'Lexend Deca',
-                                color: Color(0xFF39D2C0),
+                                color: Color(0xFFDA4167),
                                 fontSize: 18,
                                 fontWeight: FontWeight.w500,
                               ),

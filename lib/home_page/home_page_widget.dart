@@ -80,7 +80,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         centerTitle: true,
         elevation: 4,
       ),
-      backgroundColor: Color(0xFFF6D2FB),
+      backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),

@@ -35,7 +35,7 @@ class _InfoWidgetState extends State<InfoWidget> {
         centerTitle: true,
         elevation: 2,
       ),
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
@@ -48,7 +48,7 @@ class _InfoWidgetState extends State<InfoWidget> {
                   '    Esse Aplicativo é de uso exclusivo dos lideres da IASD Vila Aurora.  \n    Foi criado para ajudar na organização e desenvolvimento das atividades da igreja local.  ',
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Poppins',
-                        color: Color(0xFF3A3A3A),
+                        color: FlutterFlowTheme.of(context).primaryText,
                       ),
                 ),
                 Padding(
@@ -57,7 +57,7 @@ class _InfoWidgetState extends State<InfoWidget> {
                     'Para Saber mais entre em contato com a gente!',
                     style: FlutterFlowTheme.of(context).bodyText1.override(
                           fontFamily: 'Poppins',
-                          color: Color(0xFF3A3A3A),
+                          color: FlutterFlowTheme.of(context).primaryText,
                           fontWeight: FontWeight.w800,
                         ),
                   ),
@@ -69,7 +69,7 @@ class _InfoWidgetState extends State<InfoWidget> {
                     children: [
                       FaIcon(
                         FontAwesomeIcons.whatsapp,
-                        color: Colors.black,
+                        color: FlutterFlowTheme.of(context).primaryText,
                         size: 24,
                       ),
                       Padding(
@@ -81,7 +81,7 @@ class _InfoWidgetState extends State<InfoWidget> {
                               .override(
                                 fontFamily: 'Poppins',
                                 color:
-                                    FlutterFlowTheme.of(context).primaryColor,
+                                    FlutterFlowTheme.of(context).secondaryColor,
                                 fontWeight: FontWeight.bold,
                               ),
                         ),
@@ -90,12 +90,14 @@ class _InfoWidgetState extends State<InfoWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
                         child: Text(
                           '| Diego Silva',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Color(0xFF404040),
-                                    fontStyle: FontStyle.italic,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .bodyText1
+                              .override(
+                                fontFamily: 'Poppins',
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryText,
+                                fontStyle: FontStyle.italic,
+                              ),
                         ),
                       ),
                     ],
@@ -108,7 +110,7 @@ class _InfoWidgetState extends State<InfoWidget> {
                     children: [
                       FaIcon(
                         FontAwesomeIcons.facebook,
-                        color: Colors.black,
+                        color: FlutterFlowTheme.of(context).primaryText,
                         size: 24,
                       ),
                       Padding(
@@ -120,7 +122,7 @@ class _InfoWidgetState extends State<InfoWidget> {
                               .override(
                                 fontFamily: 'Poppins',
                                 color:
-                                    FlutterFlowTheme.of(context).primaryColor,
+                                    FlutterFlowTheme.of(context).secondaryColor,
                                 fontWeight: FontWeight.bold,
                               ),
                         ),

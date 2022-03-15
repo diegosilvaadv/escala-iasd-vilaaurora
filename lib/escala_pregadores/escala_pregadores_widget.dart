@@ -89,7 +89,7 @@ class _EscalaPregadoresWidgetState extends State<EscalaPregadoresWidget> {
         centerTitle: true,
         elevation: 4,
       ),
-      backgroundColor: Color(0xFFF1F4F8),
+      backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
       endDrawer: Drawer(
         elevation: 15,
         child: Container(
@@ -153,7 +153,14 @@ class _EscalaPregadoresWidgetState extends State<EscalaPregadoresWidget> {
                             Text(
                               'Escala 2022',
                               textAlign: TextAlign.start,
-                              style: FlutterFlowTheme.of(context).bodyText1,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Poppins',
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    fontStyle: FontStyle.italic,
+                                  ),
                             ),
                           ],
                         ),
@@ -433,7 +440,7 @@ class _EscalaPregadoresWidgetState extends State<EscalaPregadoresWidget> {
                     'Escala de Pregadores',
                     style: FlutterFlowTheme.of(context).subtitle1.override(
                           fontFamily: 'Poppins',
-                          color: Color(0xFF30123A),
+                          color: FlutterFlowTheme.of(context).primaryText,
                         ),
                   ),
                 ),
@@ -489,7 +496,8 @@ class _EscalaPregadoresWidgetState extends State<EscalaPregadoresWidget> {
                                     width: MediaQuery.of(context).size.width,
                                     height: 90,
                                     decoration: BoxDecoration(
-                                      color: Colors.white,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
                                     ),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -546,8 +554,9 @@ class _EscalaPregadoresWidgetState extends State<EscalaPregadoresWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'Lexend Deca',
-                                                                color: Color(
-                                                                    0xFF15212B),
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .secondaryColor,
                                                                 fontSize: 18,
                                                                 fontWeight:
                                                                     FontWeight
@@ -581,8 +590,9 @@ class _EscalaPregadoresWidgetState extends State<EscalaPregadoresWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'Lexend Deca',
-                                                                color: Color(
-                                                                    0xFF8B97A2),
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .secondaryText,
                                                                 fontSize: 14,
                                                                 fontWeight:
                                                                     FontWeight
@@ -616,8 +626,9 @@ class _EscalaPregadoresWidgetState extends State<EscalaPregadoresWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'Lexend Deca',
-                                                                color: Color(
-                                                                    0xFF4B39EF),
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .secondaryText,
                                                                 fontSize: 14,
                                                                 fontWeight:
                                                                     FontWeight
