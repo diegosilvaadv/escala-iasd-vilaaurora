@@ -461,7 +461,10 @@ class _EscalaPastoralWidgetState extends State<EscalaPastoralWidget> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 15),
                         child: StreamBuilder<List<EscalaPastoralRecord>>(
-                          stream: queryEscalaPastoralRecord(),
+                          stream: queryEscalaPastoralRecord(
+                            queryBuilder: (escalaPastoralRecord) =>
+                                escalaPastoralRecord.orderBy('data'),
+                          ),
                           builder: (context, snapshot) {
                             // Customize what your widget looks like when it's loading.
                             if (!snapshot.hasData) {

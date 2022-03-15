@@ -462,11 +462,10 @@ class _EscalaEscolaSabatinaWidgetState
                       decoration: BoxDecoration(),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 15),
-                        child: FutureBuilder<List<EscalaEscSabatinaRecord>>(
-                          future: queryEscalaEscSabatinaRecordOnce(
+                        child: StreamBuilder<List<EscalaEscSabatinaRecord>>(
+                          stream: queryEscalaEscSabatinaRecord(
                             queryBuilder: (escalaEscSabatinaRecord) =>
-                                escalaEscSabatinaRecord.orderBy('data',
-                                    descending: true),
+                                escalaEscSabatinaRecord.orderBy('data'),
                           ),
                           builder: (context, snapshot) {
                             // Customize what your widget looks like when it's loading.
@@ -517,12 +516,8 @@ class _EscalaEscolaSabatinaWidgetState
                                               child: ClipRRect(
                                                 borderRadius:
                                                     BorderRadius.circular(8),
-                                                child: Image.network(
-                                                  valueOrDefault<String>(
-                                                    listViewEscalaEscSabatinaRecord
-                                                        .img,
-                                                    'https://play-lh.googleusercontent.com/hl6xr67QAbA6BCvdOdqkyaro4OjJ-6XDF89CEmrf_DUMVKgIo8Jsu9aPUcQBfhf-8OSI',
-                                                  ),
+                                                child: Image.asset(
+                                                  'assets/images/unnamed.png',
                                                   width: 74,
                                                   height: 74,
                                                   fit: BoxFit.cover,

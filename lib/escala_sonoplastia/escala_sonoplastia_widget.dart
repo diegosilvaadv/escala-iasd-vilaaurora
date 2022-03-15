@@ -464,10 +464,7 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                         child: FutureBuilder<List<EscalaSonoplastiaRecord>>(
                           future: queryEscalaSonoplastiaRecordOnce(
                             queryBuilder: (escalaSonoplastiaRecord) =>
-                                escalaSonoplastiaRecord
-                                    .where('data',
-                                        isEqualTo: getCurrentTimestamp)
-                                    .orderBy('data'),
+                                escalaSonoplastiaRecord.orderBy('data'),
                           ),
                           builder: (context, snapshot) {
                             // Customize what your widget looks like when it's loading.

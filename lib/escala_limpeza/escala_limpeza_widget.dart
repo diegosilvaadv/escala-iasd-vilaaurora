@@ -463,9 +463,7 @@ class _EscalaLimpezaWidgetState extends State<EscalaLimpezaWidget> {
                         child: FutureBuilder<List<EscalaLimpezaRecord>>(
                           future: queryEscalaLimpezaRecordOnce(
                             queryBuilder: (escalaLimpezaRecord) =>
-                                escalaLimpezaRecord
-                                    .where('nome', isEqualTo: 'Diego & Camilla')
-                                    .orderBy('data'),
+                                escalaLimpezaRecord.orderBy('data'),
                           ),
                           builder: (context, snapshot) {
                             // Customize what your widget looks like when it's loading.
@@ -514,12 +512,8 @@ class _EscalaLimpezaWidgetState extends State<EscalaLimpezaWidget> {
                                               child: ClipRRect(
                                                 borderRadius:
                                                     BorderRadius.circular(8),
-                                                child: Image.network(
-                                                  valueOrDefault<String>(
-                                                    listViewEscalaLimpezaRecord
-                                                        .img,
-                                                    'https://cdn-icons-png.flaticon.com/512/1059/1059219.png',
-                                                  ),
+                                                child: Image.asset(
+                                                  'assets/images/1059219.png',
                                                   width: 74,
                                                   height: 74,
                                                   fit: BoxFit.cover,

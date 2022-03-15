@@ -1,18 +1,3 @@
 {
-  "indexes": [
-    {
-      "collectionGroup": "escala_limpeza",
-      "queryScope": "COLLECTION",
-      "fields": [
-        {
-          "fieldPath": "nome",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "data",
-          "order": "ASCENDING"
-        }
-      ]
-    }
-  ]
+  "indexes": []
 }
