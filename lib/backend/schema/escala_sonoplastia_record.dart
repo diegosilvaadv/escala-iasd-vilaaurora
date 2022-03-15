@@ -21,13 +21,17 @@ abstract class EscalaSonoplastiaRecord
   String get img;
 
   @nullable
+  bool get status;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
   static void _initializeBuilder(EscalaSonoplastiaRecordBuilder builder) =>
       builder
         ..nome = ''
-        ..img = '';
+        ..img = ''
+        ..status = false;
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('escala_sonoplastia');
@@ -56,10 +60,12 @@ Map<String, dynamic> createEscalaSonoplastiaRecordData({
   String nome,
   DateTime data,
   String img,
+  bool status,
 }) =>
     serializers.toFirestore(
         EscalaSonoplastiaRecord.serializer,
         EscalaSonoplastiaRecord((e) => e
           ..nome = nome
           ..data = data
-          ..img = img));
+          ..img = img
+          ..status = status));
