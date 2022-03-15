@@ -14,6 +14,7 @@ class InfoWidget extends StatefulWidget {
 }
 
 class _InfoWidgetState extends State<InfoWidget> {
+  bool switchListTileValue;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -131,17 +132,48 @@ class _InfoWidgetState extends State<InfoWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 300, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 250, 0, 100),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        'www.adventista.org',
-                        style: FlutterFlowTheme.of(context).bodyText1,
+                      Expanded(
+                        child: SwitchListTile(
+                          value: switchListTileValue ??=
+                              Theme.of(context).brightness == Brightness.dark,
+                          onChanged: (newValue) =>
+                              setState(() => switchListTileValue = newValue),
+                          title: Text(
+                            'Theme  | Escuro - Claro',
+                            style: FlutterFlowTheme.of(context).title3,
+                          ),
+                          subtitle: Text(
+                            'Escolha seu tema.',
+                            style:
+                                FlutterFlowTheme.of(context).subtitle2.override(
+                                      fontFamily: 'Poppins',
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                    ),
+                          ),
+                          tileColor:
+                              FlutterFlowTheme.of(context).secondaryBackground,
+                          dense: false,
+                          controlAffinity: ListTileControlAffinity.trailing,
+                        ),
                       ),
                     ],
                   ),
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text(
+                      'www.adventista.org',
+                      style: FlutterFlowTheme.of(context).bodyText1,
+                    ),
+                  ],
                 ),
               ],
             ),
