@@ -195,10 +195,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 await Navigator.push(
                                   context,
                                   PageTransition(
-                                    type: PageTransitionType.fade,
-                                    duration: Duration(milliseconds: 500),
+                                    type: PageTransitionType.scale,
+                                    alignment: Alignment.bottomCenter,
+                                    duration: Duration(milliseconds: 600),
                                     reverseDuration:
-                                        Duration(milliseconds: 500),
+                                        Duration(milliseconds: 600),
                                     child: EscalaSonoplastiaWidget(),
                                   ),
                                 );
