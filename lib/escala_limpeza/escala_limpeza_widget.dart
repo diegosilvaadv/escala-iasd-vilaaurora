@@ -464,8 +464,7 @@ class _EscalaLimpezaWidgetState extends State<EscalaLimpezaWidget> {
                           future: queryEscalaLimpezaRecordOnce(
                             queryBuilder: (escalaLimpezaRecord) =>
                                 escalaLimpezaRecord
-                                    .where('data',
-                                        isNotEqualTo: getCurrentTimestamp)
+                                    .where('nome', isEqualTo: 'Diego & Camilla')
                                     .orderBy('data'),
                           ),
                           builder: (context, snapshot) {
