@@ -463,7 +463,10 @@ class _EscalaLimpezaWidgetState extends State<EscalaLimpezaWidget> {
                         child: StreamBuilder<List<EscalaLimpezaRecord>>(
                           stream: queryEscalaLimpezaRecord(
                             queryBuilder: (escalaLimpezaRecord) =>
-                                escalaLimpezaRecord.orderBy('data'),
+                                escalaLimpezaRecord
+                                    .where('data',
+                                        isEqualTo: getCurrentTimestamp)
+                                    .orderBy('data'),
                           ),
                           builder: (context, snapshot) {
                             // Customize what your widget looks like when it's loading.
