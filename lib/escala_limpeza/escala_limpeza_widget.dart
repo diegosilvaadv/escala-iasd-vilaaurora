@@ -460,12 +460,12 @@ class _EscalaLimpezaWidgetState extends State<EscalaLimpezaWidget> {
                       decoration: BoxDecoration(),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 15),
-                        child: StreamBuilder<List<EscalaLimpezaRecord>>(
-                          stream: queryEscalaLimpezaRecord(
+                        child: FutureBuilder<List<EscalaLimpezaRecord>>(
+                          future: queryEscalaLimpezaRecordOnce(
                             queryBuilder: (escalaLimpezaRecord) =>
                                 escalaLimpezaRecord
                                     .where('data',
-                                        isEqualTo: getCurrentTimestamp)
+                                        isNotEqualTo: getCurrentTimestamp)
                                     .orderBy('data'),
                           ),
                           builder: (context, snapshot) {
