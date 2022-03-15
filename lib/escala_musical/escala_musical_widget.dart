@@ -505,7 +505,7 @@ class _EscalaMusicalWidgetState extends State<EscalaMusicalWidget> {
                                                   valueOrDefault<String>(
                                                     listViewEscalaMusicalRecord
                                                         .img,
-                                                    'https://cdn-icons.flaticon.com/png/512/4766/premium/4766775.png?token=exp=1647302192~hmac=a252f4292a803e1c1b938a8cd4a69b09',
+                                                    'https://cdn-icons-png.flaticon.com/512/2302/2302274.png',
                                                   ),
                                                   width: 74,
                                                   height: 74,
