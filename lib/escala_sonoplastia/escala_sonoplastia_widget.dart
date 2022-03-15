@@ -668,15 +668,36 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text(
-                        'Histórico',
-                        style: FlutterFlowTheme.of(context).bodyText1,
+                      Container(
+                        width: MediaQuery.of(context).size.width,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          color: FlutterFlowTheme.of(context).primaryText,
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Histórico',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Poppins',
+                                    color: FlutterFlowTheme.of(context)
+                                        .tertiaryColor,
+                                    fontSize: 18,
+                                  ),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
                   Column(
                     mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
                         width: MediaQuery.of(context).size.width,
@@ -688,7 +709,7 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                             future: queryEscalaSonoplastiaRecordOnce(
                               queryBuilder: (escalaSonoplastiaRecord) =>
                                   escalaSonoplastiaRecord
-                                      .where('status', isEqualTo: true)
+                                      .where('status', isEqualTo: false)
                                       .orderBy('data'),
                             ),
                             builder: (context, snapshot) {
@@ -730,6 +751,8 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                                       ),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
                                         children: [
                                           Column(
                                             mainAxisSize: MainAxisSize.max,
