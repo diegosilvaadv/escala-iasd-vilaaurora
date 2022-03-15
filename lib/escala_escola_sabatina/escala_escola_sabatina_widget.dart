@@ -462,10 +462,11 @@ class _EscalaEscolaSabatinaWidgetState
                       decoration: BoxDecoration(),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 15),
-                        child: StreamBuilder<List<EscalaEscSabatinaRecord>>(
-                          stream: queryEscalaEscSabatinaRecord(
+                        child: FutureBuilder<List<EscalaEscSabatinaRecord>>(
+                          future: queryEscalaEscSabatinaRecordOnce(
                             queryBuilder: (escalaEscSabatinaRecord) =>
-                                escalaEscSabatinaRecord.orderBy('data'),
+                                escalaEscSabatinaRecord.orderBy('data',
+                                    descending: true),
                           ),
                           builder: (context, snapshot) {
                             // Customize what your widget looks like when it's loading.
