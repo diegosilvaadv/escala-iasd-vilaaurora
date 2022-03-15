@@ -461,7 +461,11 @@ class _EscalaLimpezaWidgetState extends State<EscalaLimpezaWidget> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 15),
                         child: StreamBuilder<List<EscalaLimpezaRecord>>(
-                          stream: queryEscalaLimpezaRecord(),
+                          stream: queryEscalaLimpezaRecord(
+                            queryBuilder: (escalaLimpezaRecord) =>
+                                escalaLimpezaRecord.orderBy('data',
+                                    descending: true),
+                          ),
                           builder: (context, snapshot) {
                             // Customize what your widget looks like when it's loading.
                             if (!snapshot.hasData) {
