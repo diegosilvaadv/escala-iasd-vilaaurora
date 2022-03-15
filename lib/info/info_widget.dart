@@ -14,7 +14,6 @@ class InfoWidget extends StatefulWidget {
 }
 
 class _InfoWidgetState extends State<InfoWidget> {
-  bool switchListTileValue;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -135,31 +134,42 @@ class _InfoWidgetState extends State<InfoWidget> {
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Expanded(
-                          child: SwitchListTile(
-                            value: switchListTileValue ??=
-                                !(Theme.of(context).brightness ==
-                                    Brightness.dark),
-                            onChanged: (newValue) =>
-                                setState(() => switchListTileValue = newValue),
-                            title: Text(
-                              'Theme  | Escuro - Claro',
-                              style: FlutterFlowTheme.of(context).title3,
+                        InkWell(
+                          onTap: () async {
+                            setDarkModeSetting(context, ThemeMode.dark);
+                          },
+                          child: Container(
+                            width: 250,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context).primaryColor,
                             ),
-                            subtitle: Text(
-                              'Escolha seu tema.',
-                              style: FlutterFlowTheme.of(context)
-                                  .subtitle2
-                                  .override(
-                                    fontFamily: 'Poppins',
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryText,
-                                  ),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      'Ativar Modo Escuro',
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(context)
+                                          .title3
+                                          .override(
+                                            fontFamily: 'Poppins',
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
+                                            fontSize: 23,
+                                          ),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
-                            tileColor: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            dense: false,
-                            controlAffinity: ListTileControlAffinity.trailing,
                           ),
                         ),
                       ],
