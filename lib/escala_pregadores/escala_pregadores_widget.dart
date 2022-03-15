@@ -461,7 +461,10 @@ class _EscalaPregadoresWidgetState extends State<EscalaPregadoresWidget> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 15),
                         child: StreamBuilder<List<EscalaPregadoresRecord>>(
-                          stream: queryEscalaPregadoresRecord(),
+                          stream: queryEscalaPregadoresRecord(
+                            queryBuilder: (escalaPregadoresRecord) =>
+                                escalaPregadoresRecord.orderBy('data'),
+                          ),
                           builder: (context, snapshot) {
                             // Customize what your widget looks like when it's loading.
                             if (!snapshot.hasData) {

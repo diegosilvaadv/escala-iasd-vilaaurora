@@ -77,7 +77,7 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(4, 0, 4, 0),
                   child: Icon(
-                    Icons.search_rounded,
+                    Icons.search,
                     color: Color(0xFF95A1AC),
                     size: 30,
                   ),
@@ -461,8 +461,14 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                       decoration: BoxDecoration(),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 15),
-                        child: StreamBuilder<List<EscalaSonoplastiaRecord>>(
-                          stream: queryEscalaSonoplastiaRecord(),
+                        child: FutureBuilder<List<EscalaSonoplastiaRecord>>(
+                          future: queryEscalaSonoplastiaRecordOnce(
+                            queryBuilder: (escalaSonoplastiaRecord) =>
+                                escalaSonoplastiaRecord
+                                    .where('data',
+                                        isEqualTo: getCurrentTimestamp)
+                                    .orderBy('data'),
+                          ),
                           builder: (context, snapshot) {
                             // Customize what your widget looks like when it's loading.
                             if (!snapshot.hasData) {

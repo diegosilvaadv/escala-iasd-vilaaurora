@@ -463,7 +463,10 @@ class _EscalaEscolaSabatinaWidgetState
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 15),
                         child: StreamBuilder<List<EscalaEscSabatinaRecord>>(
-                          stream: queryEscalaEscSabatinaRecord(),
+                          stream: queryEscalaEscSabatinaRecord(
+                            queryBuilder: (escalaEscSabatinaRecord) =>
+                                escalaEscSabatinaRecord.orderBy('data'),
+                          ),
                           builder: (context, snapshot) {
                             // Customize what your widget looks like when it's loading.
                             if (!snapshot.hasData) {
