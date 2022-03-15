@@ -672,12 +672,21 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                         width: MediaQuery.of(context).size.width,
                         height: 50,
                         decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).primaryText,
+                          color: FlutterFlowTheme.of(context).secondaryText,
                         ),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
+                              child: Icon(
+                                Icons.arrow_upward_rounded,
+                                color: FlutterFlowTheme.of(context).alternate,
+                                size: 35,
+                              ),
+                            ),
                             Text(
                               'Histórico',
                               style: FlutterFlowTheme.of(context)
@@ -688,6 +697,15 @@ class _EscalaSonoplastiaWidgetState extends State<EscalaSonoplastiaWidget> {
                                         .tertiaryColor,
                                     fontSize: 18,
                                   ),
+                            ),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                              child: Icon(
+                                Icons.arrow_downward_sharp,
+                                color: FlutterFlowTheme.of(context).alternate,
+                                size: 35,
+                              ),
                             ),
                           ],
                         ),
