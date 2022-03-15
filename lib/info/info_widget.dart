@@ -139,7 +139,6 @@ class _InfoWidgetState extends State<InfoWidget> {
                           InkWell(
                             onTap: () async {
                               setDarkModeSetting(context, ThemeMode.dark);
-                              setDarkModeSetting(context, ThemeMode.light);
                             },
                             child: Container(
                               width: 250,
