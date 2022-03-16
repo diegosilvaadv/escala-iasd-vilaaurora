@@ -514,12 +514,8 @@ class _EscalaLimpezaWidgetState extends State<EscalaLimpezaWidget> {
                                               child: ClipRRect(
                                                 borderRadius:
                                                     BorderRadius.circular(8),
-                                                child: Image.network(
-                                                  valueOrDefault<String>(
-                                                    listViewEscalaLimpezaRecord
-                                                        .img,
-                                                    'https://cdn-icons-png.flaticon.com/512/984/984773.png',
-                                                  ),
+                                                child: Image.asset(
+                                                  'assets/images/1059219.png',
                                                   width: 74,
                                                   height: 74,
                                                   fit: BoxFit.cover,
@@ -776,7 +772,7 @@ class _EscalaLimpezaWidgetState extends State<EscalaLimpezaWidget> {
                                                       valueOrDefault<String>(
                                                         listViewEscalaLimpezaRecord
                                                             .img,
-                                                        'https://cdn-icons-png.flaticon.com/512/1719/1719985.png',
+                                                        'https://cdn-icons-png.flaticon.com/512/984/984773.png',
                                                       ),
                                                       width: 74,
                                                       height: 74,
@@ -845,7 +841,7 @@ class _EscalaLimpezaWidgetState extends State<EscalaLimpezaWidget> {
                                                             ),
                                                             Text(
                                                               dateTimeFormat(
-                                                                  'yMMMd',
+                                                                  'd/M/y',
                                                                   listViewEscalaLimpezaRecord
                                                                       .data),
                                                               style: FlutterFlowTheme

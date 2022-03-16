@@ -514,12 +514,8 @@ class _EscalaPastoralWidgetState extends State<EscalaPastoralWidget> {
                                             child: ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(8),
-                                              child: Image.network(
-                                                valueOrDefault<String>(
-                                                  listViewEscalaPastoralRecord
-                                                      .img,
-                                                  'https://cdn-icons-png.flaticon.com/512/1719/1719985.png',
-                                                ),
+                                              child: Image.asset(
+                                                'assets/images/Sidnei-da-Silva-Guimares1_(2).png',
                                                 width: 74,
                                                 height: 74,
                                                 fit: BoxFit.cover,
@@ -586,7 +582,7 @@ class _EscalaPastoralWidgetState extends State<EscalaPastoralWidget> {
                                                       ),
                                                       Text(
                                                         dateTimeFormat(
-                                                            'yMMMd',
+                                                            'd/M/y',
                                                             listViewEscalaPastoralRecord
                                                                 .data),
                                                         style:
@@ -778,12 +774,8 @@ class _EscalaPastoralWidgetState extends State<EscalaPastoralWidget> {
                                                 child: ClipRRect(
                                                   borderRadius:
                                                       BorderRadius.circular(8),
-                                                  child: Image.network(
-                                                    valueOrDefault<String>(
-                                                      listViewEscalaPastoralRecord
-                                                          .img,
-                                                      'https://cdn-icons-png.flaticon.com/512/1719/1719985.png',
-                                                    ),
+                                                  child: Image.asset(
+                                                    'assets/images/Sidnei-da-Silva-Guimares1_(2).png',
                                                     width: 74,
                                                     height: 74,
                                                     fit: BoxFit.cover,
@@ -848,7 +840,7 @@ class _EscalaPastoralWidgetState extends State<EscalaPastoralWidget> {
                                                           ),
                                                           Text(
                                                             dateTimeFormat(
-                                                                'yMMMd',
+                                                                'd/M/y',
                                                                 listViewEscalaPastoralRecord
                                                                     .data),
                                                             style: FlutterFlowTheme

@@ -518,12 +518,8 @@ class _EscalaEscolaSabatinaWidgetState
                                             child: ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(8),
-                                              child: Image.network(
-                                                valueOrDefault<String>(
-                                                  listViewEscalaEscSabatinaRecord
-                                                      .img,
-                                                  'https://cdn-icons-png.flaticon.com/512/1719/1719985.png',
-                                                ),
+                                              child: Image.asset(
+                                                'assets/images/unnamed.png',
                                                 width: 74,
                                                 height: 74,
                                                 fit: BoxFit.cover,
@@ -590,7 +586,7 @@ class _EscalaEscolaSabatinaWidgetState
                                                       ),
                                                       Text(
                                                         dateTimeFormat(
-                                                            'yMMMd',
+                                                            'd/M/y',
                                                             listViewEscalaEscSabatinaRecord
                                                                 .data),
                                                         style:
@@ -782,12 +778,8 @@ class _EscalaEscolaSabatinaWidgetState
                                                 child: ClipRRect(
                                                   borderRadius:
                                                       BorderRadius.circular(8),
-                                                  child: Image.network(
-                                                    valueOrDefault<String>(
-                                                      listViewEscalaEscSabatinaRecord
-                                                          .img,
-                                                      'https://cdn-icons-png.flaticon.com/512/1719/1719985.png',
-                                                    ),
+                                                  child: Image.asset(
+                                                    'assets/images/unnamed.png',
                                                     width: 74,
                                                     height: 74,
                                                     fit: BoxFit.cover,
@@ -852,7 +844,7 @@ class _EscalaEscolaSabatinaWidgetState
                                                           ),
                                                           Text(
                                                             dateTimeFormat(
-                                                                'yMMMd',
+                                                                'd/M/y',
                                                                 listViewEscalaEscSabatinaRecord
                                                                     .data),
                                                             style: FlutterFlowTheme

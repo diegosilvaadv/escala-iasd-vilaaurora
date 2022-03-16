@@ -714,10 +714,10 @@ class _EscalaPregadoresWidgetState extends State<EscalaPregadoresWidget> {
                           decoration: BoxDecoration(),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                            child: FutureBuilder<List<EscalaSonoplastiaRecord>>(
-                              future: queryEscalaSonoplastiaRecordOnce(
-                                queryBuilder: (escalaSonoplastiaRecord) =>
-                                    escalaSonoplastiaRecord
+                            child: FutureBuilder<List<EscalaPregadoresRecord>>(
+                              future: queryEscalaPregadoresRecordOnce(
+                                queryBuilder: (escalaPregadoresRecord) =>
+                                    escalaPregadoresRecord
                                         .where('status', isEqualTo: false)
                                         .orderBy('data'),
                               ),
@@ -735,18 +735,18 @@ class _EscalaPregadoresWidgetState extends State<EscalaPregadoresWidget> {
                                     ),
                                   );
                                 }
-                                List<EscalaSonoplastiaRecord>
-                                    listViewEscalaSonoplastiaRecordList =
+                                List<EscalaPregadoresRecord>
+                                    listViewEscalaPregadoresRecordList =
                                     snapshot.data;
                                 return ListView.builder(
                                   padding: EdgeInsets.zero,
                                   primary: false,
                                   scrollDirection: Axis.vertical,
-                                  itemCount: listViewEscalaSonoplastiaRecordList
-                                      .length,
+                                  itemCount:
+                                      listViewEscalaPregadoresRecordList.length,
                                   itemBuilder: (context, listViewIndex) {
-                                    final listViewEscalaSonoplastiaRecord =
-                                        listViewEscalaSonoplastiaRecordList[
+                                    final listViewEscalaPregadoresRecord =
+                                        listViewEscalaPregadoresRecordList[
                                             listViewIndex];
                                     return Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
@@ -776,9 +776,9 @@ class _EscalaPregadoresWidgetState extends State<EscalaPregadoresWidget> {
                                                             8),
                                                     child: Image.network(
                                                       valueOrDefault<String>(
-                                                        listViewEscalaSonoplastiaRecord
+                                                        listViewEscalaPregadoresRecord
                                                             .img,
-                                                        'https://cdn-icons-png.flaticon.com/512/1719/1719985.png',
+                                                        'https://cdn-icons-png.flaticon.com/512/984/984773.png',
                                                       ),
                                                       width: 74,
                                                       height: 74,
@@ -811,7 +811,7 @@ class _EscalaPregadoresWidgetState extends State<EscalaPregadoresWidget> {
                                                               MainAxisSize.max,
                                                           children: [
                                                             Text(
-                                                              listViewEscalaSonoplastiaRecord
+                                                              listViewEscalaPregadoresRecord
                                                                   .nome,
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -847,8 +847,8 @@ class _EscalaPregadoresWidgetState extends State<EscalaPregadoresWidget> {
                                                             ),
                                                             Text(
                                                               dateTimeFormat(
-                                                                  'yMMMd',
-                                                                  listViewEscalaSonoplastiaRecord
+                                                                  'yMd',
+                                                                  listViewEscalaPregadoresRecord
                                                                       .data),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -885,7 +885,7 @@ class _EscalaPregadoresWidgetState extends State<EscalaPregadoresWidget> {
                                                             Text(
                                                               dateTimeFormat(
                                                                   'EEEE',
-                                                                  listViewEscalaSonoplastiaRecord
+                                                                  listViewEscalaPregadoresRecord
                                                                       .data),
                                                               style: FlutterFlowTheme
                                                                       .of(context)

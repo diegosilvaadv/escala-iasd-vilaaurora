@@ -518,7 +518,7 @@ class _EscalaMusicalWidgetState extends State<EscalaMusicalWidget> {
                                                   valueOrDefault<String>(
                                                     listViewEscalaMusicalRecord
                                                         .img,
-                                                    'https://cdn-icons-png.flaticon.com/512/984/984773.png',
+                                                    'https://cdn-icons-png.flaticon.com/512/2302/2302274.png',
                                                   ),
                                                   width: 74,
                                                   height: 74,
@@ -776,7 +776,7 @@ class _EscalaMusicalWidgetState extends State<EscalaMusicalWidget> {
                                                       valueOrDefault<String>(
                                                         listViewEscalaMusicalRecord
                                                             .img,
-                                                        'https://cdn-icons-png.flaticon.com/512/1719/1719985.png',
+                                                        'https://cdn-icons-png.flaticon.com/512/2302/2302274.png',
                                                       ),
                                                       width: 74,
                                                       height: 74,
@@ -845,7 +845,7 @@ class _EscalaMusicalWidgetState extends State<EscalaMusicalWidget> {
                                                             ),
                                                             Text(
                                                               dateTimeFormat(
-                                                                  'yMMMd',
+                                                                  'd/M/y',
                                                                   listViewEscalaMusicalRecord
                                                                       .data),
                                                               style: FlutterFlowTheme
