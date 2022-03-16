@@ -42,7 +42,7 @@ class _SenhaAcessoWidgetState extends State<SenhaAcessoWidget> {
                 controller: textController,
                 obscureText: !passwordVisibility,
                 decoration: InputDecoration(
-                  labelText: 'Address, city, state...',
+                  labelText: 'Senha',
                   labelStyle: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Lexend Deca',
                         color: Color(0xFF57636C),
