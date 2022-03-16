@@ -21,13 +21,17 @@ abstract class EscalaPregadoresRecord
   String get img;
 
   @nullable
+  bool get status;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
   static void _initializeBuilder(EscalaPregadoresRecordBuilder builder) =>
       builder
         ..nome = ''
-        ..img = '';
+        ..img = ''
+        ..status = false;
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('escala_pregadores');
@@ -56,10 +60,12 @@ Map<String, dynamic> createEscalaPregadoresRecordData({
   String nome,
   DateTime data,
   String img,
+  bool status,
 }) =>
     serializers.toFirestore(
         EscalaPregadoresRecord.serializer,
         EscalaPregadoresRecord((e) => e
           ..nome = nome
           ..data = data
-          ..img = img));
+          ..img = img
+          ..status = status));

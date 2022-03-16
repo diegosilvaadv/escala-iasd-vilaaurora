@@ -21,12 +21,16 @@ abstract class EscalaPastoralRecord
   String get img;
 
   @nullable
+  bool get status;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
   static void _initializeBuilder(EscalaPastoralRecordBuilder builder) => builder
     ..nome = ''
-    ..img = '';
+    ..img = ''
+    ..status = false;
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('escala_pastoral');
@@ -54,10 +58,12 @@ Map<String, dynamic> createEscalaPastoralRecordData({
   String nome,
   DateTime data,
   String img,
+  bool status,
 }) =>
     serializers.toFirestore(
         EscalaPastoralRecord.serializer,
         EscalaPastoralRecord((e) => e
           ..nome = nome
           ..data = data
-          ..img = img));
+          ..img = img
+          ..status = status));

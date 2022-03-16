@@ -21,12 +21,16 @@ abstract class EscalaMusicalRecord
   String get img;
 
   @nullable
+  bool get status;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
   static void _initializeBuilder(EscalaMusicalRecordBuilder builder) => builder
     ..nome = ''
-    ..img = '';
+    ..img = ''
+    ..status = false;
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('escala_musical');
@@ -54,10 +58,12 @@ Map<String, dynamic> createEscalaMusicalRecordData({
   String nome,
   DateTime data,
   String img,
+  bool status,
 }) =>
     serializers.toFirestore(
         EscalaMusicalRecord.serializer,
         EscalaMusicalRecord((e) => e
           ..nome = nome
           ..data = data
-          ..img = img));
+          ..img = img
+          ..status = status));

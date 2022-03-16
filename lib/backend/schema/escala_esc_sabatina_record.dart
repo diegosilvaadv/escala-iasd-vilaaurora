@@ -21,13 +21,17 @@ abstract class EscalaEscSabatinaRecord
   String get img;
 
   @nullable
+  bool get status;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
   static void _initializeBuilder(EscalaEscSabatinaRecordBuilder builder) =>
       builder
         ..nome = ''
-        ..img = '';
+        ..img = ''
+        ..status = false;
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('escala_esc_sabatina');
@@ -56,10 +60,12 @@ Map<String, dynamic> createEscalaEscSabatinaRecordData({
   String nome,
   DateTime data,
   String img,
+  bool status,
 }) =>
     serializers.toFirestore(
         EscalaEscSabatinaRecord.serializer,
         EscalaEscSabatinaRecord((e) => e
           ..nome = nome
           ..data = data
-          ..img = img));
+          ..img = img
+          ..status = status));
